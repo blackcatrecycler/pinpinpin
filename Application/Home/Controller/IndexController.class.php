@@ -8,7 +8,7 @@ class IndexController extends Controller {
 
 	private $appid = "wxaeaf64d64e6d989f";
 	private $appsecret = "8995779993c5b2f4448ec4451d5a3e5d";
-	private $appid_faker = "wx09aaef70a0a8e448 ";
+	private $appid_faker = "wx09aaef70a0a8e448";
 	private $appsecret_faker = "b5a7e32676db8bc0bdcd18f3402fa487";
 
 	public function index() {
