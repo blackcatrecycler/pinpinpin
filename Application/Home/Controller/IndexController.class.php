@@ -34,7 +34,7 @@ class IndexController extends Controller {
 			{
 				"name":"组队查询",
 				"type":"view",
-				"url":"https://120.27.104.254//LoveLD",
+				"url":"https://120.27.104.254//LoveLD"
 			},
 			{
 				"name":"队伍相关",
@@ -42,26 +42,26 @@ class IndexController extends Controller {
 				{
 					"name":"我的申请",
 					"type":"view",
-					"url":"https://120.27.104.254//LoveLD",
+					"url":"https://120.27.104.254//LoveLD"
 				},
 				{
 					"name":"我的创建",
 					"type":"view",
-					"url":"https://120.27.104.254//LoveLD",
+					"url":"https://120.27.104.254//LoveLD"
 				}]
 
 			},
 			{
 				"name":"组队查询",
 				"type":"view",
-				"url":"https://120.27.104.254//LoveLD",
+				"url":"https://120.27.104.254//LoveLD"
 			}
 			]
 		}';
 		$url_result = " https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" . $access_token;
 		$output_result = $this->wxRequest($url_result, $menu_data);
 		echo $output_result;
-		echo $menu_data;
+		//echo $menu_data;
 	}
 
 	//This is for wechat
