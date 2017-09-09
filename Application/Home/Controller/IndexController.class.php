@@ -27,7 +27,7 @@ class IndexController extends Controller {
 	}
 
 	public function createMenu() {
-		$jsoninfo = getToken();
+		$jsoninfo = $this->getToken();
 		$access_token = $jsoninfo['access_token'];
 		$menu_data = '{
 			"button":[
