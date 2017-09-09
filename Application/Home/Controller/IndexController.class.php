@@ -26,6 +26,44 @@ class IndexController extends Controller {
 
 	}
 
+	public function createMenu() {
+		$jsoninfo = getToken();
+		$access_token = $jsoninfo['access_token'];
+		$menu_data = '{
+			"button":[
+			{
+				"name":"组队查询",
+				"type":"view",
+				"url":"https://120.27.104.254//LoveLD",
+			},
+			{
+				"name":"队伍相关",
+				"sub_button":[
+				{
+					"name":"我的申请",
+					"type":"view",
+					"url":"https://120.27.104.254//LoveLD",
+				},
+				{
+					"name":"我的创建",
+					"type":"view",
+					"url":"https://120.27.104.254//LoveLD",
+				}]
+
+			},
+			{
+				"name":"组队查询",
+				"type":"view",
+				"url":"https://120.27.104.254//LoveLD",
+			}
+			]
+		}';
+		$url_result = " https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" . $access_token;
+		$output_result = http_request($url_result, $menu_data);
+		echo $output_result;
+		echo $menu_data;
+	}
+
 	//This is for wechat
 	private function checkSignature() {
 		$sign = $_GET["signature"];
@@ -51,4 +89,12 @@ class IndexController extends Controller {
 			exit;
 		}
 	}
+
+	private function getToken() {
+		$getUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxaeaf64d64e6d989f&secret=8995779993c5b2f4448ec4451d5a3e5d";
+		$output = https_request($getUrl);
+		$jsoninfo = json_decode($output, true);
+		return $jsoninfo;
+	}
+
 }
