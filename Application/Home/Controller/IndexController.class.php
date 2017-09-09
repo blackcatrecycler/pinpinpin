@@ -59,12 +59,13 @@ class IndexController extends Controller {
 			]
 		}';
 		$url_result = " https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" . $access_token;
-		$output_result = http_request($url_result, $menu_data);
+		$output_result = $this->wxRequest($url_result, $menu_data);
 		echo $output_result;
 		echo $menu_data;
 	}
 
 	//This is for wechat
+	//token验证（服务器用）
 	private function checkSignature() {
 		$sign = $_GET["signature"];
 		$tist = $_GET["timestamp"];
@@ -81,6 +82,7 @@ class IndexController extends Controller {
 		}
 	}
 
+	//微信服务端验证
 	public function valid() {
 		$echoStr = $_GET["echostr"];
 		if ($this->checkSignature()) {
@@ -90,11 +92,28 @@ class IndexController extends Controller {
 		}
 	}
 
+	//获取acces_token
 	private function getToken() {
 		$getUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxaeaf64d64e6d989f&secret=8995779993c5b2f4448ec4451d5a3e5d";
-		$output = http_request($getUrl);
+		$output = $this->wxRequest($getUrl);
 		$jsoninfo = json_decode($output, true);
 		return $jsoninfo;
+	}
+
+	//http请求
+	private function wxRequest($url, $data = null) {
+		$curl = curl_init();
+		curl_setopt($curl, CURLOPT_URL, $url);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+		if (!empty($data)) {
+			curl_setopt($curl, CURLOPT_POST, 1);
+			curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+		}
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		$output = curl_exec($curl);
+		curl_close($curl);
+		return $output;
 	}
 
 }
