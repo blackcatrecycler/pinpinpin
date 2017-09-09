@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><span style="front-size:20px;color:bule">哇，心态崩了</span>
