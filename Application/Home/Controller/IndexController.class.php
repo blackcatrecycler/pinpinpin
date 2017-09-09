@@ -92,7 +92,7 @@ class IndexController extends Controller {
 
 	private function getToken() {
 		$getUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxaeaf64d64e6d989f&secret=8995779993c5b2f4448ec4451d5a3e5d";
-		$output = https_request($getUrl);
+		$output = http_request($getUrl);
 		$jsoninfo = json_decode($output, true);
 		return $jsoninfo;
 	}
