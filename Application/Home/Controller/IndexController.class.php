@@ -99,7 +99,7 @@ class IndexController extends Controller {
 
 	//获取acces_token
 	private function getToken() {
-		$getUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" . $appid_faker . "&secret=" . appsecret_faker;
+		$getUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" . $this->$appid_faker . "&secret=" . $this->$appsecret_faker;
 		$output = $this->wxRequest($getUrl);
 		$jsoninfo = json_decode($output, true);
 		return $jsoninfo;
