@@ -3,6 +3,6 @@
  <head>
  </head>
  <body>
- 	<a href="<?php echo U('menu');?>">点我跳转</a>
+ 	<a href="<?php echo U('valid');?>">点我跳转</a>
  </body>
  </html>
