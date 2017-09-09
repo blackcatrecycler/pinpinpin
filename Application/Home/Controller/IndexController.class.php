@@ -30,6 +30,7 @@ class IndexController extends Controller {
 		$jsoninfo = $this->getToken();
 		$access_token = $jsoninfo['access_token'];
 		var_dump($jsoninfo);
+		var_dump(@access_token);
 		$menu_data = '{
 			"button":[
 			{
@@ -60,6 +61,7 @@ class IndexController extends Controller {
 			]
 		}';
 		$url_result = " https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" . $access_token;
+		var_dump($url_result);
 		$output_result = $this->wxRequest($url_result, $menu_data);
 		var_dump($output_result);
 		//echo $menu_data;
