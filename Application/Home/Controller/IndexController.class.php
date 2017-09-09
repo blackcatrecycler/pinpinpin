@@ -32,7 +32,7 @@ class IndexController extends Controller {
 		$jsoninfo = $this->getToken();
 		$access_token = $jsoninfo['access_token'];
 		var_dump($jsoninfo);
-		var_dump(@access_token);
+		var_dump($access_token);
 		$menu_data = '{
 			"button":[
 			{
