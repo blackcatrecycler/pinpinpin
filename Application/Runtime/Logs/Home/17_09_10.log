@@ -1,0 +1,92 @@
+[ 2017-09-10T10:34:38+08:00 ] ::1 /pinpinpin/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.094791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.062918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.063031s ]
+
+[ 2017-09-10T10:39:58+08:00 ] ::1 /pinpinpin/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-09-10T10:40:00+08:00 ] ::1 /pinpinpin/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+
+[ 2017-09-10T10:40:00+08:00 ] ::1 /pinpinpin/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+
+[ 2017-09-10T10:41:19+08:00 ] ::1 /pinpinpin/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+NOTIC: [8] Undefined index: echostr F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 177 行.
+NOTIC: [8] Undefined index: signature F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 160 行.
+NOTIC: [8] Undefined index: timestamp F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 161 行.
+NOTIC: [8] Undefined index: nonce F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 162 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.083766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.083819s ]
+
+[ 2017-09-10T10:41:19+08:00 ] ::1 /pinpinpin/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+NOTIC: [8] Undefined index: echostr F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 177 行.
+NOTIC: [8] Undefined index: signature F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 160 行.
+NOTIC: [8] Undefined index: timestamp F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 161 行.
+NOTIC: [8] Undefined index: nonce F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 162 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2017-09-10T10:41:21+08:00 ] ::1 /pinpinpin/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001585s ]
+NOTIC: [8] Undefined index: echostr F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 177 行.
+NOTIC: [8] Undefined index: signature F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 160 行.
+NOTIC: [8] Undefined index: timestamp F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 161 行.
+NOTIC: [8] Undefined index: nonce F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 162 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2017-09-10T10:41:22+08:00 ] ::1 /pinpinpin/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+NOTIC: [8] Undefined index: echostr F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 177 行.
+NOTIC: [8] Undefined index: signature F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 160 行.
+NOTIC: [8] Undefined index: timestamp F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 161 行.
+NOTIC: [8] Undefined index: nonce F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 162 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000645s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
