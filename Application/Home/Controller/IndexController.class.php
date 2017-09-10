@@ -187,7 +187,7 @@ class MyChat {
  				<MsgType><![CDATA[text]]></MsgType>
  				<Content><![CDATA[%s]]></Content>
  				</xml>";
-		$time = time();
+		$time = intval(time());
 		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, $time, $content);
 		echo $resultStr;
 	}

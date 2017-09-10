@@ -165,3 +165,39 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000745s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000797s ]
 
+[ 2017-09-10T12:40:02+08:00 ] ::1 /pinpinpin/index.php/Home/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.028742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019311s ]
+NOTIC: [8] Undefined index: HTTP_RAW_POST_DATA F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009127s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009205s ]
+
+[ 2017-09-10T12:40:02+08:00 ] ::1 /pinpinpin/index.php/Home/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+NOTIC: [8] Undefined index: HTTP_RAW_POST_DATA F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2017-09-10T12:40:05+08:00 ] ::1 /pinpinpin/index.php/Home/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+NOTIC: [8] Undefined index: HTTP_RAW_POST_DATA F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001151s ]
+
