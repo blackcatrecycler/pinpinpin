@@ -13,7 +13,11 @@ class IndexController extends Controller {
 
 	public function index() {
 		$main = new MyChat();
-		$main->valid();
+		if (isset($_GET['echostr'])) {
+			$main->valid();
+		} else {
+
+		}
 	}
 
 	public function menu() {
@@ -28,13 +32,18 @@ class IndexController extends Controller {
 
 	}
 
+	public function msgResponse() {
+
+	}
+
 	public function createMenu() {
-		$jsoninfo = $this->getToken();
+		$mc = new MyChat();
+		$jsoninfo = $mc->getToken();
 		$access_token = $jsoninfo['access_token'];
 		echo "<br>jsoninfo:  ";
 		var_dump($jsoninfo);
 		echo "<br>access_token:  ";
-		var_dump($this->$access_token);
+		var_dump($access_token);
 		$menu_data = '{
 			"button":[
 			{
@@ -67,87 +76,11 @@ class IndexController extends Controller {
 		$url_result = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" . $access_token;
 		echo "<br>url_result:  ";
 		var_dump($url_result);
-		$output_result = $this->wxRequest($url_result, $menu_data);
+		$output_result = $mc->wxRequest($url_result, $menu_data);
 		$output_resultinfo = json_decode($output_result, true);
 		echo "<br>output_result:  ";
 		var_dump($output_resultinfo);
 		//echo $menu_data;
-	}
-
-	//This is for wechat
-	//token验证（服务器用）
-	private function checkSignature() {
-		$sign = $_GET["signature"];
-		$tist = $_GET["timestamp"];
-		$none = $_GET["nonce"];
-		$wx_token = "blacat0214";
-		$tmpArr = array($wx_token, $tist, $none);
-		sort($tmpArr, SORT_STRING);
-		$tmpStr = implode($tmpArr);
-		$tmpStr = sha1($tmpStr);
-		if ($tmpStr == $sign) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	//微信服务端验证
-	public function valid() {
-		$echoStr = $_GET["echostr"];
-		if ($this->checkSignature()) {
-			header('content-type:text');
-			echo $echoStr;
-			exit;
-		}
-	}
-
-	//获取acces_token
-	//每次调用检查当前token，已存在生效的不需要重复获取，过期需要重新获取。
-	private function getToken() {
-		$tokenData = $this->readJson();
-		var_dump($tokenData);
-		$nowtimestamp = $tokenData['nowtimestamp'] + 0;
-		$now_time = intval(time()) + 0;
-		if ($nowtimestamp == null || $nowtimestamp <= $now_time) {
-
-			$getUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx09aaef70a0a8e448&secret=b5a7e32676db8bc0bdcd18f3402fa487";
-			$output = $this->wxRequest($getUrl);
-			$jsoninfo = json_decode($output, true);
-			$tokenData['access_token'] = $jsoninfo['access_token'];
-			$tokenData['nowtimestamp'] = intval(time()) + 7200;
-			$this->writeJson($tokenData);
-			return $tokenData;
-		}
-		return $tokenData;
-	}
-
-	private function writeJson($data) {
-		$json_string = json_encode($data);
-		file_put_contents('access_token.json', $json_string);
-	}
-
-	private function readJson() {
-		$json_string = file_get_contents('access_token.json');
-		$jsoninfo = json_decode($json_string); //这是一个stdclass类型，无法直接使用，所以需要用下方转换为数组
-		$arr = get_object_vars($jsoninfo);
-		return $arr;
-	}
-
-	//http请求
-	private function wxRequest($url, $data = null) {
-		$curl = curl_init();
-		curl_setopt($curl, CURLOPT_URL, $url);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
-		if (!empty($data)) {
-			curl_setopt($curl, CURLOPT_POST, 1);
-			curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-		}
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-		$output = curl_exec($curl);
-		curl_close($curl);
-		return $output;
 	}
 
 }
@@ -183,7 +116,7 @@ class MyChat {
 	}
 
 	//http请求
-	private function wxRequest($url, $data = null) {
+	public function wxRequest($url, $data = null) {
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
@@ -200,7 +133,7 @@ class MyChat {
 
 	//获取acces_token
 	//每次调用检查当前token，已存在生效的不需要重复获取，过期需要重新获取。
-	private function getToken() {
+	public function getToken() {
 		$tokenData = $this->readJson();
 		var_dump($tokenData);
 		$nowtimestamp = $tokenData['nowtimestamp'] + 0;
@@ -230,5 +163,32 @@ class MyChat {
 		$jsoninfo = json_decode($json_string); //这是一个stdclass类型，无法直接使用，所以需要用下方转换为数组
 		$arr = get_object_vars($jsoninfo);
 		return $arr;
+	}
+
+	//消息获取
+	public function recive_msg() {
+		$rec_data = $GLOBALS["HTTP_RAW_POST_DATA"];
+		if (!empty($rec_data)) {
+			$rec_object = simplexml_load_string($rec_data, 'SimpleXMLElement', LIBXML_NOCDATA);
+			$fromUsername = $rec_object->FromUserName;
+			$toUsername = $rec_object->ToUserName;
+			$time = $rec_object->CreateTime;
+			$content = trim($rec_object->Content);
+
+			response_msg($toUsername, $fromUsername, $content);
+		}
+	}
+	//消息回复
+	public function response_msg($fromUsername, $toUsername, $content) {
+		$text_temple = "<xml>
+ 				<ToUserName><![CDATA[%s]]></ToUserName>
+ 				<FromUserName><![CDATA[%s]]></FromUserName>
+ 				<CreateTime>%s</CreateTime>
+ 				<MsgType><![CDATA[text]]></MsgType>
+ 				<Content><![CDATA[%s]]></Content>
+ 				</xml>";
+		$time = time();
+		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, $time, $content);
+		echo $resultStr;
 	}
 }
