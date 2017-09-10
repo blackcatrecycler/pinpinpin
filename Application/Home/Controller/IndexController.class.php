@@ -6,14 +6,14 @@ use Think\Controller;
 define("WX_TOKEN", "blacat0214");
 class IndexController extends Controller {
 
-	private $appid = "wxaeaf64d64e6d989f";
-	private $appsecret = "8995779993c5b2f4448ec4451d5a3e5d";
+	//private $appid = "wxaeaf64d64e6d989f";
+	//private $appsecret = "8995779993c5b2f4448ec4451d5a3e5d";
 	private $appid_faker = "wx09aaef70a0a8e448";
 	private $appsecret_faker = "b5a7e32676db8bc0bdcd18f3402fa487";
 
 	public function index() {
-		$this->display();
-
+		$main = new \Org\MyWeChat\MyChat();
+		$main->valid();
 	}
 
 	public function menu() {
@@ -31,14 +31,16 @@ class IndexController extends Controller {
 	public function createMenu() {
 		$jsoninfo = $this->getToken();
 		$access_token = $jsoninfo['access_token'];
+		echo "<br>jsoninfo:  ";
 		var_dump($jsoninfo);
-		var_dump($access_token);
+		echo "<br>access_token:  ";
+		var_dump($this->$access_token);
 		$menu_data = '{
 			"button":[
 			{
 				"name":"组队查询",
 				"type":"view",
-				"url":"https://120.27.104.254//LoveLD"
+				"url":"https://120.27.104.254/LoveLD"
 			},
 			{
 				"name":"队伍相关",
@@ -46,26 +48,29 @@ class IndexController extends Controller {
 				{
 					"name":"我的申请",
 					"type":"view",
-					"url":"https://120.27.104.254//LoveLD"
+					"url":"https://120.27.104.254/LoveLD"
 				},
 				{
 					"name":"我的创建",
 					"type":"view",
-					"url":"https://120.27.104.254//LoveLD"
+					"url":"https://120.27.104.254/LoveLD"
 				}]
 
 			},
 			{
-				"name":"组队查询",
+				"name":"个人中心",
 				"type":"view",
-				"url":"https://120.27.104.254//LoveLD"
+				"url":"https://120.27.104.254/LoveLD"
 			}
 			]
 		}';
-		$url_result = " https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" . $access_token;
+		$url_result = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" . $access_token;
+		echo "<br>url_result:  ";
 		var_dump($url_result);
 		$output_result = $this->wxRequest($url_result, $menu_data);
-		var_dump($output_result);
+		$output_resultinfo = json_decode($output_result, true);
+		echo "<br>output_result:  ";
+		var_dump($output_resultinfo);
 		//echo $menu_data;
 	}
 
@@ -98,11 +103,35 @@ class IndexController extends Controller {
 	}
 
 	//获取acces_token
+	//每次调用检查当前token，已存在生效的不需要重复获取，过期需要重新获取。
 	private function getToken() {
-		$getUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx09aaef70a0a8e448&secret=b5a7e32676db8bc0bdcd18f3402fa487";
-		$output = $this->wxRequest($getUrl);
-		$jsoninfo = json_decode($output, true);
-		return $jsoninfo;
+		$tokenData = $this->readJson();
+		var_dump($tokenData);
+		$nowtimestamp = $tokenData['nowtimestamp'] + 0;
+		$now_time = intval(time()) + 0;
+		if ($nowtimestamp == null || $nowtimestamp <= $now_time) {
+
+			$getUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx09aaef70a0a8e448&secret=b5a7e32676db8bc0bdcd18f3402fa487";
+			$output = $this->wxRequest($getUrl);
+			$jsoninfo = json_decode($output, true);
+			$tokenData['access_token'] = $jsoninfo['access_token'];
+			$tokenData['nowtimestamp'] = intval(time()) + 7200;
+			$this->writeJson($tokenData);
+			return $tokenData;
+		}
+		return $tokenData;
+	}
+
+	private function writeJson($data) {
+		$json_string = json_encode($data);
+		file_put_contents('access_token.json', $json_string);
+	}
+
+	private function readJson() {
+		$json_string = file_get_contents('access_token.json');
+		$jsoninfo = json_decode($json_string); //这是一个stdclass类型，无法直接使用，所以需要用下方转换为数组
+		$arr = get_object_vars($jsoninfo);
+		return $arr;
 	}
 
 	//http请求
