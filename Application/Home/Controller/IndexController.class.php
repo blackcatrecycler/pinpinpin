@@ -26,7 +26,8 @@ class IndexController extends Controller {
 
 	public function logintemp() {
 		$acc_code = $_GET["code"];
-		$this->success('防止屏蔽失效，即将进入', U("login", 'code=' . $acc_code));
+		$this->assign('codedata', $acc_code);
+		$this->display();
 	}
 
 	public function login() {
