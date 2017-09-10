@@ -79,7 +79,7 @@ class IndexController extends Controller {
 				$newbind['state'] = 1;
 				$bind_result = $bind->add($newbind);
 				if ($bind_result) {
-					$this->success("绑定成功，欢迎新用户", U('userdisply'));
+					$this->success("绑定成功，欢迎新用户", U('userdisplay'));
 
 				} else {
 					$this->error("绑定错误");
@@ -100,7 +100,7 @@ class IndexController extends Controller {
 				$newbind['state'] = 1;
 				$bind_result = $bind->add($newbind);
 				if ($bind_result) {
-					$this->success("绑定成功，欢迎回来", U('userdisply'));
+					$this->success("绑定成功，欢迎回来", U('userdisplay'));
 
 				} else {
 					$this->error("绑定错误");
@@ -109,7 +109,7 @@ class IndexController extends Controller {
 		}
 	}
 
-	public function userdisply() {
+	public function userdisplay() {
 		if (session("?wxusername")) {
 			$get_openid = session("wxusername");
 			$se = M('wxuser');
