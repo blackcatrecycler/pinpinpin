@@ -31,7 +31,8 @@ class IndexController extends Controller {
 		$main = new MyChat();
 		$result = $main->wxRequest($acc_url);
 		$resultinfo = json_decode($result);
-		echo $resultinfo['openid'];
+		$get_openid = $resultinfo['openid'];
+		echo $get_openid;
 	}
 
 	public function register() {
@@ -71,11 +72,11 @@ class IndexController extends Controller {
 			{
 				"name":"个人中心",
 				"type":"view",
-				"url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx09aaef70a0a8e448&redirect_uri=https://recyclerblacat.top/pinpinpin/index.php/Home/Index/login&amp;response_type=code&amp;scope=snsapi_base&amp;state=loveld#wechat_redirect "
+				"url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx09aaef70a0a8e448&redirect_uri=https://recyclerblacat.top/pinpinpin/index.php/Home/Index/login&response_type=code&amp;scope=snsapi_bas
+e&state=loveld#wechat_redirect "
 			}
 			]
 		}';
-		echo "<br>json:  " . $menu_data;
 		$url_result = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" . $access_token;
 		echo "<br>url_result:  ";
 		var_dump($url_result);
