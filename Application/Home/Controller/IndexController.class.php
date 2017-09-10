@@ -30,7 +30,7 @@ class IndexController extends Controller {
 		echo $acc_url;
 		$main = new MyChat();
 		$result = $main->wxRequest($acc_url);
-		$resultinfo = json_decode($result);
+		$resultinfo = json_decode($result, true);
 		$get_openid = $resultinfo['openid'];
 		echo $get_openid;
 	}
