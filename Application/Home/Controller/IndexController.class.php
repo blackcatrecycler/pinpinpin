@@ -48,7 +48,7 @@ class IndexController extends Controller {
 		if ($wxse == null || $wxse == false) {
 			$this->display();
 		} else {
-			$this->success('已绑定用户', U('userdisply'), 0);
+			$this->success('已绑定用户', U('userdisplay'), 0);
 		}
 	}
 
