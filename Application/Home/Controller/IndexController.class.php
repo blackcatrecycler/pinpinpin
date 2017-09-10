@@ -16,7 +16,7 @@ class IndexController extends Controller {
 		if (isset($_GET['echostr'])) {
 			$main->valid();
 		} else {
-
+			$main->recive_msg();
 		}
 	}
 
@@ -175,7 +175,7 @@ class MyChat {
 			$time = $rec_object->CreateTime;
 			$content = trim($rec_object->Content);
 
-			response_msg($toUsername, $fromUsername, $content);
+			$this->response_msg($toUsername, $fromUsername, $content);
 		}
 	}
 	//消息回复
