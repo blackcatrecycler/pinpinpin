@@ -175,7 +175,11 @@ class MyChat {
 			$time = $rec_object->CreateTime;
 			$content = trim($rec_object->Content);
 
-			$this->response_msg($toUsername, $fromUsername, $content);
+			$result = $this->response_msg($toUsername, $fromUsername, $content);
+			echo $result;
+		} else {
+			echo "";
+			exit;
 		}
 	}
 	//消息回复
@@ -189,7 +193,7 @@ class MyChat {
 </xml>";
 		$time = intval(time());
 		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, $time, $content);
-		echo $resultStr;
 		file_put_contents('log', $resultStr);
+		return $resultStr;
 	}
 }
