@@ -32,7 +32,8 @@ class IndexController extends Controller {
 		$result = $main->wxRequest($acc_url);
 		$resultinfo = json_decode($result, true);
 		$get_openid = $resultinfo['openid'];
-		echo $get_openid;
+		var_dump($resultinfo);
+		echo "1234";
 	}
 
 	public function register() {
