@@ -27,6 +27,7 @@ class IndexController extends Controller {
 	public function login() {
 		$acc_code = $_GET["code"];
 		$acc_url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx09aaef70a0a8e448&secret=b5a7e32676db8bc0bdcd18f3402fa487&code=" . $acc_code . "&grant_type=authorization_code";
+		echo $acc_url;
 		$main = new MyChat();
 		$result = $main->wxRequest($acc_url);
 		$resultinfo = json_decode($result);
