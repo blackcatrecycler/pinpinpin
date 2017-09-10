@@ -12,23 +12,21 @@
         <h1 class="page__title">您还没有绑定账户</h1>
         <p class="page__desc">用户绑定</p>
     </div>
- 	<form method="POST" class="weui-cells weui-cells_form">
+ 	<form method="POST" class="weui-cells weui-cells_form" action="<?php echo U('userbind');?>">
  			<div class="weui-cell">
               	<div class="weui-cell__hd"><label class="weui-label">学号</label></div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入学号">
+                    <input class="weui-input" name="userid" type="number" pattern="[0-9]*" placeholder="请输入学号">
                 </div>
             </div>
 
             <div class="weui-cell">
               	<div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="text"  placeholder="请输入姓名">
+                    <input class="weui-input" type="text" name="username"  placeholder="请输入姓名">
                 </div>
             </div>
-            <div class="page__bd page__bd_spacing">
-        		<a href="javascript:;" class="weui-btn weui-btn_primary">页面主操作 Normal</a>
-    		</div>
+        		<button id="getbind" class="weui-btn weui-btn_primary">确认绑定</button>
  	</form>
 
  	<script src="/pinpinpin/Public/js/zepto.min.js"></script>

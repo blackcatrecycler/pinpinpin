@@ -161,3 +161,833 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
 
+[ 2017-09-11T00:42:53+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000931s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006229s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2017-09-11T00:49:34+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011316s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011411s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000941s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000966s ]
+
+[ 2017-09-11T01:59:49+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019902s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012415s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.083710s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.083782s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.410963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.411028s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.032531s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.032577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.035627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.035681s ]
+
+[ 2017-09-11T01:59:49+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019902s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012320s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000862s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001848s ]
+
+[ 2017-09-11T01:59:55+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007084s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000713s ]
+
+[ 2017-09-11T03:39:00+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: User F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 47 行.
+ERR: Call to a member function where() on null
+
+[ 2017-09-11T03:40:00+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000065s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2017-09-11T03:40:27+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005932s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000595s ]
+
+[ 2017-09-11T03:44:10+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userbind.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2017-09-11T03:44:26+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] Undefined variable: U F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 15 行.
+ERR: Function name must be a string
+
+[ 2017-09-11T03:44:35+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] Undefined variable: U F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 15 行.
+ERR: Function name must be a string
+
+[ 2017-09-11T03:44:36+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] Undefined variable: U F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 15 行.
+ERR: Function name must be a string
+
+[ 2017-09-11T03:44:36+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000058s ]
+NOTIC: [8] Undefined variable: U F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 15 行.
+ERR: Function name must be a string
+
+[ 2017-09-11T03:44:37+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined variable: U F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 15 行.
+ERR: Function name must be a string
+
+[ 2017-09-11T03:44:37+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000954s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: U F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 15 行.
+ERR: Function name must be a string
+
+[ 2017-09-11T03:44:45+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005603s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000599s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2017-09-11T03:47:02+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000801s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005661s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000704s ]
+
+[ 2017-09-11T03:50:20+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062879s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2017-09-11T03:55:38+08:00 ] ::1 /pinpinpin/index.php/Home/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+NOTIC: [8] Undefined index: HTTP_RAW_POST_DATA F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 195 行.
+
+[ 2017-09-11T03:55:42+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000060s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000551s ]
+
+[ 2017-09-11T03:55:43+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisply.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001009s ]
+ERR: 非法操作:userdisply
+
+[ 2017-09-11T03:56:06+08:00 ] ::1 /pinpinpin/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+NOTIC: [8] Undefined index: code F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 32 行.
+NOTIC: [8] Undefined index: openid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Home\Controller\IndexController.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `wxuser` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `wxuser` WHERE ( wx="" and state = 1 ) LIMIT 1   [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005636s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005670s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000637s ]
+
+[ 2017-09-11T03:56:09+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userbind.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2017-09-11T04:11:25+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userbind.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-09-11T05:06:37+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028516s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028680s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000702s ]
+
+[ 2017-09-11T05:07:06+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2017-09-11T05:07:22+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016582s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000947s ]
+
+[ 2017-09-11T05:07:24+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001091s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000922s ]
+
+[ 2017-09-11T05:07:32+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000895s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000574s ]
+
+[ 2017-09-11T05:07:57+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019804s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2017-09-11T05:08:25+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000057s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014937s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-09-11T05:09:06+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] Undefined variable: userid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 18 行.
+NOTIC: [8] Undefined variable: username F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 23 行.
+NOTIC: [8] Undefined variable: sex F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 27 行.
+NOTIC: [8] Undefined variable: mobile F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000981s ]
+
+[ 2017-09-11T05:15:11+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] Undefined variable: userid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 18 行.
+NOTIC: [8] Undefined variable: username F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 23 行.
+NOTIC: [8] Undefined variable: sex F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 27 行.
+NOTIC: [8] Undefined variable: mobile F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2017-09-11T05:16:22+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+NOTIC: [8] Undefined variable: userid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 18 行.
+NOTIC: [8] Undefined variable: username F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 23 行.
+NOTIC: [8] Undefined variable: sex F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 27 行.
+NOTIC: [8] Undefined variable: mobile F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025667s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000911s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000972s ]
+
+[ 2017-09-11T05:18:36+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+NOTIC: [8] Undefined variable: userid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 18 行.
+NOTIC: [8] Undefined variable: username F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 23 行.
+NOTIC: [8] Undefined variable: sex F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 27 行.
+NOTIC: [8] Undefined variable: mobile F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006744s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000912s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000739s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2017-09-11T05:18:37+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] Undefined variable: userid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 18 行.
+NOTIC: [8] Undefined variable: username F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 23 行.
+NOTIC: [8] Undefined variable: sex F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 27 行.
+NOTIC: [8] Undefined variable: mobile F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-09-11T05:18:37+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined variable: userid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 18 行.
+NOTIC: [8] Undefined variable: username F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 23 行.
+NOTIC: [8] Undefined variable: sex F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 27 行.
+NOTIC: [8] Undefined variable: mobile F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008593s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000882s ]
+
+[ 2017-09-11T05:20:56+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+NOTIC: [8] Undefined variable: userid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 18 行.
+NOTIC: [8] Undefined variable: username F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 23 行.
+NOTIC: [8] Undefined variable: sex F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 27 行.
+NOTIC: [8] Undefined variable: mobile F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2017-09-11T05:26:03+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: userid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 18 行.
+NOTIC: [8] Undefined variable: username F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 23 行.
+NOTIC: [8] Undefined variable: sex F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 27 行.
+NOTIC: [8] Undefined variable: mobile F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021918s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000683s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2017-09-11T05:26:31+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+NOTIC: [8] Undefined variable: userid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 18 行.
+NOTIC: [8] Undefined variable: username F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 23 行.
+NOTIC: [8] Undefined variable: sex F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 27 行.
+NOTIC: [8] Undefined variable: mobile F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005690s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000525s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2017-09-11T05:35:43+08:00 ] ::1 /pinpinpin/index.php/Home/Index/userdisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001913s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+NOTIC: [8] Undefined variable: userid F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 18 行.
+NOTIC: [8] Undefined variable: username F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 23 行.
+NOTIC: [8] Undefined variable: sex F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 27 行.
+NOTIC: [8] Undefined variable: mobile F:\php\httpd-2.4.20-win64-VC14\Apache24\htdocs\pinpinpin\Application\Runtime\Cache\Home\4d6295bf8b7e617f3241b41e15aabb40.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031361s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031423s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+

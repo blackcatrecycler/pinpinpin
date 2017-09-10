@@ -43,11 +43,102 @@ class IndexController extends Controller {
 			$get_openid = session('wxusername'); //得到了openid
 			//echo "openid:" . $get_openid;
 		}
-		$this->display();
+		$se = M('wxuser');
+		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+		if ($wxse == null || $wxse == false) {
+			$this->display();
+		} else {
+			$this->success('已绑定用户', U('userdisply'), 0);
+		}
 	}
 
-	public function register() {
+	public function userbind() {
+		if (!isset($_POST['userid']) || !isset($_POST['username'])) {
+			$this->error("输入学号和姓名");
+		}
+		$post_userid = $_POST['userid'];
+		$post_username = $_POST['username'];
+		$database = M("users");
+		$search_result1 = $database->where('id=' . $post_userid)->find();
+		if (!session('?wxusername')) {
+			echo "error:no session";
+			exit;
+		}
+		if ($search_result1 == false || $search_result1 == null) {
 
+			$newuser['id'] = $post_userid;
+			$newuser['name'] = $post_username;
+			$newuser['sex'] = 0;
+			$newuser['mobile'] = '12345678910';
+			$add_user_result = $database->add($newuser);
+			if ($add_user_result) {
+				$bind = M('wxuser');
+				$newbind['wx'] = session('wxusername');
+				$newbind['userid'] = $post_userid;
+				$newbind['createtime'] = time();
+				$newbind['state'] = 1;
+				$bind_result = $bind->add($newbind);
+				if ($bind_result) {
+					$this->success("绑定成功，欢迎新用户", U('userdisply'));
+
+				} else {
+					$this->error("绑定错误");
+				}
+			} else {
+				$this->error("服务器错误");
+			}
+
+		} else {
+			$search_result2 = $database->where('id=' . $post_userid . ' AND name="' . $post_username . '"')->find();
+			if ($search_result2 == null || $search_result2 == false) {
+				$this->error("学号姓名不匹配");
+			} else {
+				$bind = M('wxuser');
+				$newbind['wx'] = session('wxusername');
+				$newbind['userid'] = $post_userid;
+				$newbind['createtime'] = time();
+				$newbind['state'] = 1;
+				$bind_result = $bind->add($newbind);
+				if ($bind_result) {
+					$this->success("绑定成功，欢迎回来", U('userdisply'));
+
+				} else {
+					$this->error("绑定错误");
+				}
+			}
+		}
+	}
+
+	public function userdisply() {
+		if (session("?wxusername")) {
+			$get_openid = session("wxusername");
+			$se = M('wxuser');
+			$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+			if ($wxse == null || $wxse == false) {
+				$this->success('未绑定用户', U('login'), 0);
+
+			} else {
+				$database = M('users');
+				$userdata = $database->where("id=" . $wxse['userid'])->find();
+				if ($userdata) {
+					$this->assign('userid', $userdata['id']);
+					$this->assign('username', $userdata['name']);
+					$this->assign('sex', $userdata['sex']);
+					$this->assign('mobile', $userdata['mobile']);
+					$this->display();
+				} else {
+					echo "error :userid error";
+					exit;
+				}
+			}
+		} else {
+			echo "error :no session";
+			exit;
+		}
+	}
+
+	public function removebind() {
+		echo "1";
 	}
 
 	public function createMenu() {
@@ -189,8 +280,11 @@ class MyChat {
 			$toUsername = $rec_object->ToUserName;
 			$time = $rec_object->CreateTime;
 			$content = trim($rec_object->Content);
-			$result = $this->response_msg($toUsername, $fromUsername, $content);
-			echo $result;
+			if (strstr($content, "刘丹")) {
+				$result = $this->response_msg($toUsername, $fromUsername, "我爱你");
+			} else {
+				$result = $this->response_msg($toUsername, $fromUsername, $content);
+			}echo $result;
 		} else {
 			echo "";
 			exit;
