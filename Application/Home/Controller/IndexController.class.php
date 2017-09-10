@@ -183,7 +183,7 @@ class MyChat {
 		}
 	}
 	//消息回复
-	public function response_msg($fromUsername, $toUsername, $content) {
+	public function response_msg($toUsername, $fromUsername, $content) {
 		$text_temple = "<xml>
     <ToUserName><![CDATA[%s]]></ToUserName>
     <FromUserName><![CDATA[%s]]></FromUserName>
