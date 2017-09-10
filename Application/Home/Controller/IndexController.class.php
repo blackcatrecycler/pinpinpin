@@ -123,7 +123,13 @@ class IndexController extends Controller {
 				if ($userdata) {
 					$this->assign('userid', $userdata['id']);
 					$this->assign('username', $userdata['name']);
-					$this->assign('sex', $userdata['sex']);
+					$sex = $userdata['sex'];
+					if ($sex == '0') {
+						$this->assign('sex', '女');
+					} else {
+						$this->assign('sex', '男');
+					}
+
 					$this->assign('mobile', $userdata['mobile']);
 					$this->display();
 				} else {
@@ -138,7 +144,28 @@ class IndexController extends Controller {
 	}
 
 	public function removebind() {
-		echo "1";
+		if (session("?wxusername")) {
+			$get_openid = session("wxusername");
+			$se = M('wxuser');
+			$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+			if ($wxse == null || $wxse == false) {
+				$this->success('未绑定用户', U('login'), 0);
+				exit;
+			} else {
+				$wxse['state'] = 0;
+				$result = $se->where('wx="' . $get_openid . '" AND state = 1')->save($wxse);
+				if ($result == flase) {
+					echo "error :update error";
+					exit;
+				} else {
+					$this->success('解绑成功', U('login'), 0);
+					exit;
+				}
+			}
+		} else {
+			echo "error :no session";
+			exit;
+		}
 	}
 
 	public function createMenu() {
