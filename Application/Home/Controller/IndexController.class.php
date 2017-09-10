@@ -24,6 +24,11 @@ class IndexController extends Controller {
 		$this->show('<span style="font-size:20px;color:blue">哇，心态崩了</span>');
 	}
 
+	public function logintemp() {
+		$acc_code = $_GET["code"];
+		$this->success('防止屏蔽失效，即将进入', U("login", 'code=' . $acc_code));
+	}
+
 	public function login() {
 		$acc_code = $_GET["code"];
 		$acc_url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx09aaef70a0a8e448&secret=b5a7e32676db8bc0bdcd18f3402fa487&code=" . $acc_code . "&grant_type=authorization_code";
@@ -33,7 +38,6 @@ class IndexController extends Controller {
 		$resultinfo = json_decode($result, true);
 		$get_openid = $resultinfo['openid'];
 		var_dump($resultinfo);
-		echo "1234";
 	}
 
 	public function register() {
@@ -73,7 +77,7 @@ class IndexController extends Controller {
 			{
 				"name":"个人中心",
 				"type":"view",
-				"url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx09aaef70a0a8e448&redirect_uri=https%3A%2F%2Frecyclerblacat.top%2Fpinpinpin%2Findex.php%2FHome%2FIndex%2Flogin&response_type=code&scope=snsapi_bas
+				"url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx09aaef70a0a8e448&redirect_uri=https%3A%2F%2Frecyclerblacat.top%2Fpinpinpin%2Findex.php%2FHome%2FIndex%2Flogintemp&response_type=code&scope=snsapi_bas
 e&state=loveld#wechat_redirect "
 			}
 			]
