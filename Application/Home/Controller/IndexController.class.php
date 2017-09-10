@@ -25,14 +25,15 @@ class IndexController extends Controller {
 	}
 
 	public function login() {
-
+		$acc_code = $_GET["code"];
+		$acc_url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx09aaef70a0a8e448&secret=b5a7e32676db8bc0bdcd18f3402fa487&code=" . $acc_code . "&grant_type=authorization_code";
+		$main = new MyChat();
+		$result = $main->wxRequest($acc_url);
+		$resultinfo = json_decode($result);
+		echo $resultinfo['openid'];
 	}
 
 	public function register() {
-
-	}
-
-	public function msgResponse() {
 
 	}
 
@@ -49,7 +50,7 @@ class IndexController extends Controller {
 			{
 				"name":"组队查询",
 				"type":"view",
-				"url":"https://120.27.104.254/LoveLD"
+				"url":"https://recyclerblacat.top/LoveLD"
 			},
 			{
 				"name":"队伍相关",
@@ -57,19 +58,20 @@ class IndexController extends Controller {
 				{
 					"name":"我的申请",
 					"type":"view",
-					"url":"https://120.27.104.254/LoveLD"
+					"url":"https://recyclerblacat.top/LoveLD"
 				},
 				{
 					"name":"我的创建",
 					"type":"view",
-					"url":"https://120.27.104.254/LoveLD"
+					"url":"https://recyclerblacat.top/LoveLD"
 				}]
 
 			},
 			{
 				"name":"个人中心",
 				"type":"view",
-				"url":"https://120.27.104.254/LoveLD"
+				"url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx09aaef70a0a8e448&redirect_uri=https://recyclerblacat.top/pinpinpin/index.php/Home/Index/login&response_type=code&scope=snsapi_bas
+e&state=loveld#wechat_redirect "
 			}
 			]
 		}';
@@ -174,8 +176,7 @@ class MyChat {
 			$toUsername = $rec_object->ToUserName;
 			$time = $rec_object->CreateTime;
 			$content = trim($rec_object->Content);
-			$def_content = '<img id="s_lg_img" src="//www.baidu.com/img/teacher_pc_8fa12bc0f7f102be0395c901ca11298f.gif" width="270" height="129" usemap="#mp">';
-			$result = $this->response_msg($toUsername, $fromUsername, $def_content);
+			$result = $this->response_msg($toUsername, $fromUsername, $content);
 			echo $result;
 		} else {
 			echo "";
