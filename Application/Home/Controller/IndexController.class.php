@@ -174,8 +174,8 @@ class MyChat {
 			$toUsername = $rec_object->ToUserName;
 			$time = $rec_object->CreateTime;
 			$content = trim($rec_object->Content);
-
-			$result = $this->response_msg($toUsername, $fromUsername, $content);
+			$def_content = '<img id="s_lg_img" src="//www.baidu.com/img/teacher_pc_8fa12bc0f7f102be0395c901ca11298f.gif" width="270" height="129" usemap="#mp">';
+			$result = $this->response_msg($toUsername, $fromUsername, $def_content);
 			echo $result;
 		} else {
 			echo "";
