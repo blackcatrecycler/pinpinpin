@@ -13,10 +13,10 @@ class IndexController extends Controller {
 
 	public function index() {
 		$main = new MyChat();
-		if (isset($_GET['echostr'])) {
-			$main->valid();
-		} else {
+		if (!isset($_GET['echostr'])) {
 			$main->recive_msg();
+		} else {
+			$main->valid();
 		}
 	}
 
