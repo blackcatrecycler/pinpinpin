@@ -181,14 +181,15 @@ class MyChat {
 	//消息回复
 	public function response_msg($fromUsername, $toUsername, $content) {
 		$text_temple = "<xml>
- 				<ToUserName><![CDATA[%s]]></ToUserName>
- 				<FromUserName><![CDATA[%s]]></FromUserName>
- 				<CreateTime>%s</CreateTime>
- 				<MsgType><![CDATA[text]]></MsgType>
- 				<Content><![CDATA[%s]]></Content>
- 				</xml>";
+    <ToUserName><![CDATA[%s]]></ToUserName>
+    <FromUserName><![CDATA[%s]]></FromUserName>
+    <CreateTime>%s</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[%s]]></Content>
+</xml>";
 		$time = intval(time());
 		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, $time, $content);
 		echo $resultStr;
+		file_put_contents('log', $resultStr);
 	}
 }
