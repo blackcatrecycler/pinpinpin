@@ -218,9 +218,9 @@ class IndexController extends Controller {
 				$this->success("请选择绑定一个账户", U('login'), 0);
 			}
 			$userid = $wxse['userid'];
-			$pneed = $_GET('need');
-			$ptitle = $_GET('ptitle');
-			$ptype = $_GET('ptype');
+			$pneed = $_GET['need'];
+			$ptitle = $_GET['ptitle'];
+			$ptype = $_GET['ptype'];
 			$pinformation = $_GET('information');
 			$maindb = M('party');
 			$newparty['userid'] = $userid;
