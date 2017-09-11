@@ -212,24 +212,27 @@ class IndexController extends Controller {
 			}
 			$get_openid = session("wxusername");
 			$sqldb = new DB_Helper();
-			$userid = $sqldb->getYourID($get_openid);
-			if ($userid != false) {
-				$pneed = $_GET('need');
-				$ptitle = $_GET('ptitle');
-				$ptype = $_GET('ptype');
-				$pinformation = $_GET('information');
-				$maindb = M('party');
-				$newparty['userid'] = $userid;
-				$newparty['need'] = $pneed;
-				$newparty['createtime'] = time();
-				$newparty['information'] = $pinformation;
-				$newparty['state'] = 1;
-				$newparty['ptype'] = $ptype;
-				$maindb->add($newparty);
-				session('ihadpost', '1');
-				$this->success('创建成功', U('mycreateparty'), 0);
-				exit;
+			$se = M('wxuser');
+			$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+			if ($wxse == null || $wxse == false) {
+				$this->success("请选择绑定一个账户", U('login'), 0);
 			}
+			$userid = $wxse['userid'];
+			$pneed = $_GET('need');
+			$ptitle = $_GET('ptitle');
+			$ptype = $_GET('ptype');
+			$pinformation = $_GET('information');
+			$maindb = M('party');
+			$newparty['userid'] = $userid;
+			$newparty['need'] = $pneed;
+			$newparty['createtime'] = time();
+			$newparty['information'] = $pinformation;
+			$newparty['state'] = 1;
+			$newparty['ptype'] = $ptype;
+			$maindb->add($newparty);
+			session('ihadpost', '1');
+			$this->success('创建成功', U('mycreateparty'), 0);
+			exit;
 		} else {
 			echo "error :no session";
 			exit;
