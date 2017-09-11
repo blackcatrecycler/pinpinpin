@@ -229,6 +229,7 @@ class IndexController extends Controller {
 			$newparty['information'] = $pinformation;
 			$newparty['state'] = 1;
 			$newparty['ptype'] = $ptype;
+			$newparty['title'] = $ptitle;
 			$maindb->add($newparty);
 			session('ihadpost', '1');
 			$this->success('创建成功', U('mycreateparty'), 0);
