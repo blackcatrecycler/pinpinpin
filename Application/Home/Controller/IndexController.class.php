@@ -189,10 +189,30 @@ class IndexController extends Controller {
 		}
 		$db_helper = new DB_Helper();
 		$se = M('wxuser');
+		$app = M('application');
 		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
 		if ($wxse == null || $wxse == false) {
 			$this->success("请选择绑定一个账户", U('login'), 0);
 		} else {
+			$partylist = M('party');
+			$list_res = $partylist->where('userid="' . $wxse['userid'] . '"')->order('createtime desc')->select();
+			foreach ($list_res as $key => $list_temp) {
+				$list_res[$key]['datestr'] = date("Y-m-d H:i:s", $list_temp['createtime']);
+				$appsearchlist = $app->where('partyid=' . $list_temp['id'] . ' AND state = 1')->select();
+				$list_res[$key]['nowcount'] = count($appsearchlist);
+				switch ($list_temp['ptype']) {
+				case '1':
+					$list_res[$key]['typetext'] = "比赛拼队";
+					break;
+				case '2':$list_res[$key]['typetext'] = "外卖拼团";
+					break;
+				case '3':$list_res[$key]['typetext'] = "出行拼车";
+					break;
+				default:
+					break;
+				}
+			}
+			$this->assign('list', $list_res);
 			$this->display();
 		}
 	}
