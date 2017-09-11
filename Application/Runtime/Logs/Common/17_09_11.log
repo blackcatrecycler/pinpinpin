@@ -687,3 +687,143 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000089s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
 
+[ 2017-09-11T19:25:07+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/content.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001022s ]
+
+[ 2017-09-11T19:25:08+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/popout.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004511s ]
+
+[ 2017-09-11T19:25:08+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/navigation.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005601s ]
+
+[ 2017-09-11T19:25:08+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/transparent.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002184s ]
+
+[ 2017-09-11T19:31:29+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/content.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000879s ]
+
+[ 2017-09-11T19:31:29+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/navigation.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2017-09-11T19:31:29+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/transparent.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-09-11T19:31:29+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/popout.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+
+[ 2017-09-11T19:34:38+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/content.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+
+[ 2017-09-11T19:34:38+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/transparent.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+
+[ 2017-09-11T19:34:38+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/navigation.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+
+[ 2017-09-11T19:34:38+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/popout.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+
+[ 2017-09-11T19:37:03+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/content.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000852s ]
+
+[ 2017-09-11T19:37:03+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/transparent.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+
+[ 2017-09-11T19:37:03+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/popout.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2017-09-11T19:37:03+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/navigation.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+
+[ 2017-09-11T19:38:21+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/content.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+
+[ 2017-09-11T19:38:21+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/navigation.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+
+[ 2017-09-11T19:38:21+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/popout.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+
+[ 2017-09-11T19:38:21+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/transparent.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+
+[ 2017-09-11T20:02:01+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/content.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+
+[ 2017-09-11T20:02:01+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/transparent.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+
+[ 2017-09-11T20:02:01+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/navigation.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000923s ]
+
+[ 2017-09-11T20:02:01+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/popout.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+
+[ 2017-09-11T20:23:50+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/content.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2017-09-11T20:23:50+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/navigation.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+
+[ 2017-09-11T20:23:50+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/popout.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+
+[ 2017-09-11T20:23:50+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/transparent.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+

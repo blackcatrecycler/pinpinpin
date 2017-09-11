@@ -1,0 +1,13 @@
+[ 2017-09-12T05:33:30+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/popout.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+
+[ 2017-09-12T05:33:30+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/navigation.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ][ 2017-09-12T05:33:30+08:00 ] ::1 /pinpinpin/index.php/Home/Index/images/layers/transparent.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+

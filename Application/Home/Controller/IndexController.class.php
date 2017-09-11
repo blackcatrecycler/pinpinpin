@@ -27,6 +27,8 @@ class IndexController extends Controller {
 	public function logintemp() {
 	}
 
+	//个人中心菜单
+	//@@ 如果绑定用户直接跳转至userdisplay页面。
 	public function login() {
 		if (!session('?wxusername')) {
 			$acc_code = $_GET["code"];
@@ -51,7 +53,7 @@ class IndexController extends Controller {
 			$this->success('已绑定用户', U('userdisplay'), 0);
 		}
 	}
-
+	//未绑定用户需要绑定
 	public function userbind() {
 		if (!isset($_POST['userid']) || !isset($_POST['username'])) {
 			$this->error("输入学号和姓名");
@@ -108,7 +110,7 @@ class IndexController extends Controller {
 			}
 		}
 	}
-
+	//用户显示，如果没有就跳转至绑定页面
 	public function userdisplay() {
 		if (session("?wxusername")) {
 			$get_openid = session("wxusername");
@@ -142,7 +144,7 @@ class IndexController extends Controller {
 			exit;
 		}
 	}
-
+	//用户解绑
 	public function removebind() {
 		if (session("?wxusername")) {
 			$get_openid = session("wxusername");
@@ -168,6 +170,69 @@ class IndexController extends Controller {
 		}
 	}
 
+	//我的创建页面
+	public function mycreateparty() {
+		if (!session('?wxusername')) {
+			$acc_code = $_GET["code"];
+
+			$acc_url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx09aaef70a0a8e448&secret=b5a7e32676db8bc0bdcd18f3402fa487&code=" . $acc_code . "&grant_type=authorization_code";
+			//echo $acc_url;
+			$main = new MyChat();
+			$result = $main->wxRequest($acc_url);
+			$resultinfo = json_decode($result, true);
+			$get_openid = $resultinfo['openid'];
+			//var_dump($resultinfo);
+			session('wxusername', $get_openid);
+		} else {
+			$get_openid = session('wxusername'); //得到了openid
+			//echo "openid:" . $get_openid;
+		}
+		$db_helper = new DB_Helper();
+		$userid = $db_helper->getYourID($get_openid);
+		if ($userid == false) {
+			$this->success("请选择绑定一个账户", U('login'), 0);
+		}
+		$this->display();
+	}
+
+	//组队创建
+	public function partycreate() {
+		$this->display();
+	}
+
+	//组队创建响应
+	public function pcreate() {
+		if (session("?wxusername")) {
+			if (session("?ihadpost")) {
+				session("ihadpost", null);
+				$this->success('请勿重复提交表单', U('login'), 0);
+				exit;
+			}
+			$get_openid = session("wxusername");
+			$sqldb = new DB_Helper();
+			$userid = $sqldb->getYourID($get_openid);
+			if ($userid != false) {
+				$pneed = $_GET('need');
+				$ptitle = $_GET('ptitle');
+				$ptype = $_GET('ptype');
+				$pinformation = $_GET('information');
+				$maindb = M('party');
+				$newparty['userid'] = $userid;
+				$newparty['need'] = $pneed;
+				$newparty['createtime'] = time();
+				$newparty['information'] = $pinformation;
+				$newparty['state'] = 1;
+				$newparty['ptype'] = $ptype;
+				$maindb->add($newparty);
+				session('ihadpost', '1');
+			}
+		} else {
+			echo "error :no session";
+			exit;
+		}
+	}
+
+	//菜单创建
 	public function createMenu() {
 		$mc = new MyChat();
 		$jsoninfo = $mc->getToken();
@@ -194,7 +259,8 @@ class IndexController extends Controller {
 				{
 					"name":"我的创建",
 					"type":"view",
-					"url":"https://recyclerblacat.top/LoveLD"
+					"url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx09aaef70a0a8e448&redirect_uri=https%3A%2F%2Frecyclerblacat.top%2Fpinpinpin%2Findex.php%2FHome%2FIndex%2Fmycreateparty&response_type=code&scope=snsapi_bas
+e&state=loveld#wechat_redirect"
 				}]
 
 			},
@@ -329,5 +395,19 @@ class MyChat {
 		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, time(), $content);
 		file_put_contents('log', $resultStr);
 		return $resultStr;
+	}
+}
+
+class DB_Helper {
+	//由openid获取绑定的用户id
+	public function getYourID($openid) {
+		$wxdb = M('wxuser');
+		$result = $wxdb->where('wx="' . openid . '" AND state = 1')->find();
+		if ($result == null || $result == flase) {
+			return false;
+		} else {
+			return $result['userid'];
+		}
+
 	}
 }
