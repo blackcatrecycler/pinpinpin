@@ -207,7 +207,7 @@ class IndexController extends Controller {
 		if (session("?wxusername")) {
 			if (session("?ihadpost")) {
 				session("ihadpost", null);
-				$this->success('请勿重复提交表单', U('login'), 0);
+				$this->success('请勿重复提交表单', U('mycreateparty'), 0);
 				exit;
 			}
 			$get_openid = session("wxusername");
@@ -227,6 +227,8 @@ class IndexController extends Controller {
 				$newparty['ptype'] = $ptype;
 				$maindb->add($newparty);
 				session('ihadpost', '1');
+				$this->success('创建成功', U('mycreateparty'), 0);
+				exit;
 			}
 		} else {
 			echo "error :no session";
