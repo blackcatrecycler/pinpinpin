@@ -221,7 +221,7 @@ class IndexController extends Controller {
 			$pneed = $_GET['need'];
 			$ptitle = $_GET['ptitle'];
 			$ptype = $_GET['ptype'];
-			$pinformation = $_GET('information');
+			$pinformation = $_GET['information'];
 			$maindb = M('party');
 			$newparty['userid'] = $userid;
 			$newparty['need'] = $pneed;
