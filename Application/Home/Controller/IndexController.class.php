@@ -188,11 +188,13 @@ class IndexController extends Controller {
 			//echo "openid:" . $get_openid;
 		}
 		$db_helper = new DB_Helper();
-		$userid = $db_helper->getYourID($get_openid);
-		if ($userid == false) {
+		$se = M('wxuser');
+		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+		if ($wxse == null || $wxse == false) {
 			$this->success("请选择绑定一个账户", U('login'), 0);
+		} else {
+			$this->display();
 		}
-		$this->display();
 	}
 
 	//组队创建
