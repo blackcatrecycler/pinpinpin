@@ -170,6 +170,48 @@ class IndexController extends Controller {
 		}
 	}
 
+	//组队查询
+	public function queryparty() {
+
+	}
+	//组队详情
+	public function partydetail() {
+		$pid = $_GET['pid'];
+		$par_db = M('party');
+		$app_db = M('application');
+		$user = M('users');
+		$par = $par_db->where('id=' . $pid . ' AND state!=0')->find();
+		if ($par == null || $par == false) {$this->success('组队信息不存在', U('queryparty'), 0);exit;}
+		$this->assign('title', $par['title']);
+		$this->assign('datastr', Date('Y-m-d H:i:s', $par['createtime']));
+		switch ($par['ptype']) {
+		case '1':
+			$this->assign('typetext', "比赛拼队");
+			break;
+		case '2':$this->assign('typetext', "外卖拼团");
+			break;
+		case '3':$this->assign('typetext', "出行拼车");
+			break;
+		default:
+			break;
+		}
+		$this->assign('information', $par['information']);
+		$userdata = $user->where('id="' . $par["userid"] . '"')->find();
+		$this->assign('username', $userdata['name']);
+		$this->assign('need', $par['need']);
+
+		$app_res = $app_db->where('partyid=' . $par['id'] . ' AND state != 0')->select();
+		$this->assign('nowcount', count($app_res));
+		foreach ($app_res as $key => $app_temp) {
+			$userdata = $user->where('id="' . $app_temp["userid"] . '"')->find();
+			$app_res[$key]['name'] = $userdata['name'];
+			$app_res[$key]['mobile'] = $userdata['mobile'];
+		}
+		$this->assign("list", $app_res);
+		$this->display();
+
+	}
+
 	//我的创建页面
 	public function mycreateparty() {
 		if (!session('?wxusername')) {
@@ -217,6 +259,7 @@ class IndexController extends Controller {
 		}
 	}
 
+//取消组队的处理接口
 	public function partydelete() {
 		if (session("?wxusername")) {
 			if (session("?ihadpost")) {
@@ -252,9 +295,6 @@ class IndexController extends Controller {
 			}
 			$this->success('删除成功', U('mycreateparty'), 0);
 			session("ihadpost", '1');
-			$gs = new MyChat();
-			$gs->response_msg($userid, "gh_a5bf17458452
-", "您已取消活动");
 			exit;
 		} else {
 			echo "error :no session";

@@ -1,0 +1,59 @@
+﻿ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<title>WeUI</title>
+<link rel="stylesheet" href="__CSS__weui.css"/>
+    <link rel="stylesheet" href="__CSS__example.css"/>
+ </head>
+ <body>
+ 	<div class="page__hd">
+        <h1 class="page__title">组队信息</h1>
+        <p class="page__desc">详情</p>
+    </div>
+ 			<div class="weui-form-preview">
+            <div class="weui-form-preview__hd">
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">{$title}</label>
+                    <em class="weui-form-preview__value"></em>
+                </div>
+            </div>
+            <div class="weui-form-preview__bd">
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">创建时间</label>
+                    <span class="weui-form-preview__value">{$datastr}</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">类型</label>
+                    <span class="weui-form-preview__value">{$typetext}</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">详情</label>
+                    <span class="weui-form-preview__value">{$information}</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">发起人</label>
+                    <span class="weui-form-preview__value">{$username}</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">目标完成情况</label>
+                    <span class="weui-form-preview__value">{$nowcount}/{$need}</span>
+                </div>
+            </div>
+            <foreach name="list" item="vo">
+                <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>{$vo.name}</p>
+                </div>
+                <div class="weui-cell__ft">{$vo.mobile}</div>
+            </div>
+            </foreach>
+        </div>
+
+ 	<script src="__JS__zepto.min.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+    <script src="__JS__example.js"></script>
+ </body>
+ </html>
