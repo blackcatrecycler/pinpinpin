@@ -12,23 +12,34 @@
         <h1 class="page__title">您还没有绑定账户</h1>
         <p class="page__desc">用户绑定</p>
     </div>
- 	<form method="POST" class="weui-cells weui-cells_form" action="{:U('userbind')}">
- 			<div class="weui-cell">
-              	<div class="weui-cell__hd"><label class="weui-label">学号</label></div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" name="userid" type="number" pattern="[0-9]*" placeholder="请输入学号">
+ 	  <foreach name="list" item="vo">
+    <div class="weui-form-preview">
+            <div class="weui-form-preview__hd">
+                <a href="{:U('partydetail')}?pid={$vo.id}"><label class="weui-form-preview__label">{$vo.title}</label></a>
+            </div>
+            <div class="weui-form-preview__bd">
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">活动类型</label>
+                    <span class="weui-form-preview__value">{$vo.typetext}</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">活动详情</label>
+                    <span class="weui-form-preview__value">{$vo.information}</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">人数</label>
+                    <span class="weui-form-preview__value">{$vo.nowcount}/{$vo.need}</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">发起时间</label>
+                    <span class="weui-form-preview__value">{$vo.datestr}</span>
                 </div>
             </div>
-
-            <div class="weui-cell">
-              	<div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="text" name="username"  placeholder="请输入姓名">
-                </div>
+            <div class="weui-form-preview__ft">
+                <a class="weui-form-preview__btn weui-form-preview__btn_primary" href="{:U('partyapp')}?appid={$vo.id}">申请活动</a>
             </div>
-        		<button id="getbind" class="weui-btn weui-btn_primary">确认绑定</button>
-                
- 	</form>
+        </div>
+    </foreach>
 
  	<script src="__JS__zepto.min.js"></script>
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>

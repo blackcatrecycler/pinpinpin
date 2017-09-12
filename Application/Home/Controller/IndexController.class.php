@@ -169,10 +169,96 @@ class IndexController extends Controller {
 			exit;
 		}
 	}
+	//组队申请
+	public function partyapp() {
+		if (!session('?wxusername')) {
+			$get_openid = session('wxusername');
+			$partyid = $_GET['pid'];
+			$p_db = M('party');
+			$a_db = M('application');
+			$se = M('wxuser');
+			$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+			if ($wxse == null || $wxse == false) {
+				$this->success("请选择绑定一个账户", U('login'), 0);
+				exit;
+			}
+			$nowparty = $p_db->where("id=" . $partyid . " AND state =1")->find();
+			if ($nowparty == null || $nowparty == false) {
+				$this->success("该活动不存在了", U('queryparty'), 0);
+				exit;
+			}
+			if ($nowparty['userid'] == $wxse['userid']) {
+				$this->success("不可以申请自己的活动", U('queryparty'), 0);
+				exit;
+			}
+			$result = $a_db->where('userid="' . $wxse['userid'] . '" AND state=1 AND partyid=' . $nowparty['id'])->find();
+			if ($result == null) {
+				$newapp['userid'] = $wxse['userid'];
+				$newapp['partyid'] = $nowparty['id'];
+				$newapp['state'] = 1;
+				$newapp['createtime'] = time();
+				$a_db->add($newapp);
+				//检查是否完成组队
+				$applist = $a_db->where('partyid=' . $nowparty['id'] . ' AND state!=0')->select();
+				if ($nowparty['need'] == count($applist)) {
+					//达成目标
+					foreach ($applist as $key => $value) {
+						# code...
+						$applist[$key]['state'] = 2;
+						$a_db->save($app_list[$key]);
+					}
+					$nowparty['state'] = 2;
+					$a_db->save($nowparty);
+				}
+				$this->success("申请成功", U('queryparty'), 0);
+				exit;
+			} else {
+				$this->success("你已经申请了", U('queryparty'), 0);
+				exit;
+			}
+		} else {
+			echo "error :no session";
+			exit;}
+
+	}
 
 	//组队查询
 	public function queryparty() {
+		if (!session('?wxusername')) {
+			$acc_code = $_GET["code"];
 
+			$acc_url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx09aaef70a0a8e448&secret=b5a7e32676db8bc0bdcd18f3402fa487&code=" . $acc_code . "&grant_type=authorization_code";
+			//echo $acc_url;
+			$main = new MyChat();
+			$result = $main->wxRequest($acc_url);
+			$resultinfo = json_decode($result, true);
+			$get_openid = $resultinfo['openid'];
+			//var_dump($resultinfo);
+			session('wxusername', $get_openid);
+		} else {
+			$get_openid = session('wxusername'); //得到了openid
+			//echo "openid:" . $get_openid;
+		}
+		$partylist = M('party');
+		$list_res = $partylist->where('  state =1')->order('createtime desc')->select();
+		foreach ($list_res as $key => $list_temp) {
+			$list_res[$key]['datestr'] = date("Y-m-d H:i:s", $list_temp['createtime']);
+			$appsearchlist = $app->where('partyid=' . $list_temp['id'] . ' AND state = 1')->select();
+			$list_res[$key]['nowcount'] = count($appsearchlist);
+			switch ($list_temp['ptype']) {
+			case '1':
+				$list_res[$key]['typetext'] = "比赛拼队";
+				break;
+			case '2':$list_res[$key]['typetext'] = "外卖拼团";
+				break;
+			case '3':$list_res[$key]['typetext'] = "出行拼车";
+				break;
+			default:
+				break;
+			}
+		}
+		$this->assign('list', $list_res);
+		$this->display();
 	}
 	//组队详情
 	public function partydetail() {
@@ -240,7 +326,7 @@ class IndexController extends Controller {
 			$list_res = $partylist->where('userid="' . $wxse['userid'] . '" AND state =1')->order('createtime desc')->select();
 			foreach ($list_res as $key => $list_temp) {
 				$list_res[$key]['datestr'] = date("Y-m-d H:i:s", $list_temp['createtime']);
-				$appsearchlist = $app->where('partyid=' . $list_temp['id'] . ' AND state = 1')->select();
+				$appsearchlist = $app->where('partyid=' . $list_temp['id'] . ' AND state != 0')->select();
 				$list_res[$key]['nowcount'] = count($appsearchlist);
 				switch ($list_temp['ptype']) {
 				case '1':
