@@ -657,7 +657,7 @@ e&state=loveld#wechat_redirect "
 		$mid = '<item>
 <Title><![CDATA[%s]]></Title>
 <Description><![CDATA[%s]]></Description>
-<PicUrl><![CDATA[https://recyclerblacat.top/pinpinpin/Public/image/demo.jpg]]></PicUrl>
+<PicUrl><![CDATA[https://recyclerblacat.top/pinpinpin/Public/images/demo.jpg]]></PicUrl>
 <Url><![CDATA[%s]]></Url>
 </item>';
 
