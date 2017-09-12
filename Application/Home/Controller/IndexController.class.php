@@ -614,7 +614,7 @@ e&state=loveld#wechat_redirect "
 	public function response_msg_myparty($toUsername, $fromUsername) {
 
 		$se = M('wxuser');
-		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+		$wxse = $se->where('wx="' . $toUsername . '" AND state = 1')->find();
 		if ($wxse == null || $wxse == false) {
 			$str = '<a href="https://recyclerblacat.top/pinpinpin/index.php/Home/Index/login">请先绑定账户</a>';
 			$resultStr = $this->response_msg($toUsername, $fromUsername, $str);
