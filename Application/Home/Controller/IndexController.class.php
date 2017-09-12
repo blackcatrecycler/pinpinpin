@@ -171,7 +171,7 @@ class IndexController extends Controller {
 	}
 	//组队申请
 	public function partyapp() {
-		if (!session('?wxusername')) {
+		if (session('?wxusername')) {
 			$get_openid = session('wxusername');
 			$partyid = $_GET['pid'];
 			$p_db = M('party');
