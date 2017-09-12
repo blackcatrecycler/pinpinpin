@@ -240,7 +240,7 @@ class IndexController extends Controller {
 		$list_res = $partylist->where('  state =1')->order('createtime desc')->select();
 		foreach ($list_res as $key => $list_temp) {
 			$list_res[$key]['datestr'] = date("Y-m-d H:i:s", $list_temp['createtime']);
-			$appsearchlist = $app->where('partyid=' . $list_temp['id'] . ' AND state != 1')->select();
+			$appsearchlist = $app->where('partyid=' . $list_temp['id'] . ' AND state != 0')->select();
 			$list_res[$key]['nowcount'] = count($appsearchlist);
 			switch ($list_temp['ptype']) {
 			case '1':
