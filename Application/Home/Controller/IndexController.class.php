@@ -657,7 +657,7 @@ e&state=loveld#wechat_redirect "
 		$mid = '<item>
 <Title><![CDATA[%s]]></Title>
 <Description><![CDATA[%s]]></Description>
-<PicUrl><![CDATA[https://recyclerblacat.top/pinpinpin/Public/images/demo.jpg]]></PicUrl>
+<PicUrl><![CDATA[%s]]></PicUrl>
 <Url><![CDATA[%s]]></Url>
 </item>';
 
@@ -665,7 +665,8 @@ e&state=loveld#wechat_redirect "
 		$tempstr = sprintf($top, $fromUsername, $toUsername, time(), $all);
 		$resultStr = $resultStr . $tempstr;
 		foreach ($fin as $key => $value) {
-			$tempstr = sprintf($mid, $value['title'], $value['information'], 'https://recyclerblacat.top/pinpinpin/index.php/Home/Index/partydetail?pid=' . $value['id']);
+			$purl = 'https://recyclerblacat.top/pinpinpin/Public/images/demo.jpg';
+			$tempstr = sprintf($mid, $value['title'], $value['information'], $purl, 'https://recyclerblacat.top/pinpinpin/index.php/Home/Index/partydetail?pid=' . $value['id']);
 			$resultStr = $resultStr . $tempstr;
 		}
 		file_put_contents('log', "4");
