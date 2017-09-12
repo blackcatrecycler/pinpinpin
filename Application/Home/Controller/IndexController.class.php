@@ -445,7 +445,8 @@ class IndexController extends Controller {
 			{
 				"name":"组队查询",
 				"type":"view",
-				"url":"https://recyclerblacat.top/LoveLD"
+				"url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx09aaef70a0a8e448&redirect_uri=https%3A%2F%2Frecyclerblacat.top%2Fpinpinpin%2Findex.php%2FHome%2FIndex%2Fqueryparty&response_type=code&scope=snsapi_bas
+e&state=loveld#wechat_redirect"
 			},
 			{
 				"name":"队伍相关",
@@ -453,7 +454,8 @@ class IndexController extends Controller {
 				{
 					"name":"我的申请",
 					"type":"view",
-					"url":"https://recyclerblacat.top/LoveLD"
+					"url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx09aaef70a0a8e448&redirect_uri=https%3A%2F%2Frecyclerblacat.top%2Fpinpinpin%2Findex.php%2FHome%2FIndex%2Fmyapp&response_type=code&scope=snsapi_bas
+e&state=loveld#wechat_redirect"
 				},
 				{
 					"name":"我的创建",
