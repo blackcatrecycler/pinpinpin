@@ -195,7 +195,7 @@ class IndexController extends Controller {
 			$this->success("请选择绑定一个账户", U('login'), 0);
 		} else {
 			$partylist = M('party');
-			$list_res = $partylist->where('userid="' . $wxse['userid'] . '"')->order('createtime desc')->select();
+			$list_res = $partylist->where('userid="' . $wxse['userid'] . '" AND state =1')->order('createtime desc')->select();
 			foreach ($list_res as $key => $list_temp) {
 				$list_res[$key]['datestr'] = date("Y-m-d H:i:s", $list_temp['createtime']);
 				$appsearchlist = $app->where('partyid=' . $list_temp['id'] . ' AND state = 1')->select();
