@@ -189,37 +189,37 @@ class IndexController extends Controller {
 		}
 		$se = M('wxuser');
 		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
-		if ($wxse == null || $wxse == false) {
-			$a_db = M('application');
-			$p_db = M('party');
-			$list = $a_db->where('userid="' . $wxse['userid'] . '" AND state =1')->select();
-			foreach ($list as $key => $value) {
-				$temp = $p_db->where("id=" . $value['partyid'])->find();
-				$list[$key]['id'] = $temp['id'];
-				$list[$key]['userid'] = $temp['userid'];
-				$list[$key]['need'] = $temp['need'];
-				$list[$key]['information'] = $temp['information'];
-				$list[$key]['ptype'] = $temp['ptype'];
-				$list[$key]['title'] = $temp['title'];
-				$list[$key]['datestr'] = date("Y-m-d H:i:s", $temp['createtime']);
-				$appsearchlist = $a_db->where('partyid=' . $value['partyid'] . ' AND state != 0')->select();
-				$list[$key]['nowcount'] = count($appsearchlist);
-				switch ($temp['ptype']) {
-				case '1':
-					$list[$key]['typetext'] = "比赛拼队";
-					break;
-				case '2':$list[$key]['typetext'] = "外卖拼团";
-					break;
-				case '3':$list[$key]['typetext'] = "出行拼车";
-					break;
-				default:
-					break;
-				}
-
+		if ($wxse == null || $wxse == false) {}
+		$a_db = M('application');
+		$p_db = M('party');
+		$list = $a_db->where('userid="' . $wxse['userid'] . '" AND state =1')->select();
+		foreach ($list as $key => $value) {
+			$temp = $p_db->where("id=" . $value['partyid'])->find();
+			$list[$key]['id'] = $temp['id'];
+			$list[$key]['userid'] = $temp['userid'];
+			$list[$key]['need'] = $temp['need'];
+			$list[$key]['information'] = $temp['information'];
+			$list[$key]['ptype'] = $temp['ptype'];
+			$list[$key]['title'] = $temp['title'];
+			$list[$key]['datestr'] = date("Y-m-d H:i:s", $temp['createtime']);
+			$appsearchlist = $a_db->where('partyid=' . $value['partyid'] . ' AND state != 0')->select();
+			$list[$key]['nowcount'] = count($appsearchlist);
+			switch ($temp['ptype']) {
+			case '1':
+				$list[$key]['typetext'] = "比赛拼队";
+				break;
+			case '2':$list[$key]['typetext'] = "外卖拼团";
+				break;
+			case '3':$list[$key]['typetext'] = "出行拼车";
+				break;
+			default:
+				break;
 			}
-			$this->assign("list", $list);
-			$this->display();
+
 		}
+		$this->assign("list", $list);
+		$this->display();
+
 	}
 
 	public function deleteapp() {
