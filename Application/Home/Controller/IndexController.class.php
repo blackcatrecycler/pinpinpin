@@ -190,8 +190,79 @@ class IndexController extends Controller {
 		$se = M('wxuser');
 		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
 		if ($wxse == null || $wxse == false) {
+			$a_db = M('application');
+			$p_db = M('party');
+			$list = $a_db->where('userid="' . $wxse['userid'] . '" AND state =1')->select();
+			foreach ($list as $key => $value) {
+				$temp = $p_db->where("id=" . $value['partyid'])->find();
+				$list[$key]['id'] = $temp['id'];
+				$list[$key]['userid'] = $temp['userid'];
+				$list[$key]['need'] = $temp['need'];
+				$list[$key]['information'] = $temp['information'];
+				$list[$key]['ptype'] = $temp['ptype'];
+				$list[$key]['title'] = $temp['title'];
+				$list[$key]['datestr'] = date("Y-m-d H:i:s", $temp['createtime']);
+				$appsearchlist = $a_db->where('partyid=' . $value['partyid'] . ' AND state != 0')->select();
+				$list[$key]['nowcount'] = count($appsearchlist);
+				switch ($temp['ptype']) {
+				case '1':
+					$list[$key]['typetext'] = "比赛拼队";
+					break;
+				case '2':$list[$key]['typetext'] = "外卖拼团";
+					break;
+				case '3':$list[$key]['typetext'] = "出行拼车";
+					break;
+				default:
+					break;
+				}
 
+			}
+			$this->assign("list", $list);
 			$this->display();
+		}
+	}
+
+	public function deleteapp() {
+		if (session("?wxusername")) {
+			if (session("?ihadpost")) {
+				session("ihadpost", null);
+				$this->success('请勿重复提交表单', U('mycreateparty'), 0);
+				exit;
+			}
+			$get_openid = session('wxusername'); //得到了openid
+			$se = M('wxuser');
+			$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+			if ($wxse == null || $wxse == false) {
+				$this->success("请选择绑定一个账户", U('login'), 0);
+				exit;
+			}
+
+			$userid = $wxse['userid'];
+			$app = M('party');
+			$a_db = M('application');
+			$appid = $_GET['appid'];
+			$res = $a_db->where('partyid=' . $appid . 'AND userid="' . $userid . '" AND state = 1')->find();
+			if ($res == null || $res == false) {
+				$this->success('该申请不存在了', U('myapp'), 0);
+				exit;
+			}
+			if ($res['userid'] != $userid) {
+				$this->success('休想删除别人的申请', U('myapp'), 0);
+				exit;
+			}
+			$data['state'] = 0;
+			$result = $a_db->where('partyid=' . $appid . 'AND userid="' . $userid . '" AND state = 1')->save($data);
+
+			if ($result == 0) {
+				$this->success('删除失败', U('myapp'), 0);
+				exit;
+			}
+			$this->success('删除成功', U('myapp'), 0);
+			session("ihadpost", '1');
+			exit;
+		} else {
+			echo "error :no session";
+			exit;
 		}
 	}
 
@@ -402,6 +473,14 @@ class IndexController extends Controller {
 			}
 			$data['state'] = 0;
 			$result = $app->where('id=' . $appid)->save($data);
+			$a_db = M('application');
+			$getdata = $a_db->where('partyid=' . $appid)->select();
+			foreach ($getdata as $key => $value) {
+				# code...
+				$data['state'] = 0;
+				$a_db->where($value['id'])->save($data);
+			}
+
 			if ($result == 0) {
 				$this->success('删除失败', U('mycreateparty'), 0);
 				exit;
