@@ -233,7 +233,7 @@ class IndexController extends Controller {
 			}
 
 			$userid = $wxse['userid'];
-			$app = M('application');
+			$app = M('party');
 			$appid = $_GET['appid'];
 			$res = $app->where('id=' . $appid . ' AND state = 1')->find();
 			if ($res == null || $res == false) {
