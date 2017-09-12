@@ -665,7 +665,8 @@ e&state=loveld#wechat_redirect "
 		$tempstr = sprintf($top, $fromUsername, $toUsername, time(), $all);
 		$resultStr = $resultStr . $tempstr;
 		foreach ($fin as $key => $value) {
-			$purl = 'https://recyclerblacat.top/pinpinpin/Public/images/demo.jpg';
+			//$purl = 'https://recyclerblacat.top/pinpinpin/Public/images/demo.jpg';
+			$purl = 'https://s1.imgchr.com/2017/09/12/neV5F.jpg';
 			$tempstr = sprintf($mid, $value['title'], $value['information'], $purl, 'https://recyclerblacat.top/pinpinpin/index.php/Home/Index/partydetail?pid=' . $value['id']);
 			$resultStr = $resultStr . $tempstr;
 		}
