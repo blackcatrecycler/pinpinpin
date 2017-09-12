@@ -217,6 +217,45 @@ class IndexController extends Controller {
 		}
 	}
 
+	public function partydelete() {
+		if (session("?wxusername")) {
+			if (session("?ihadpost")) {
+				session("ihadpost", null);
+				$this->success('请勿重复提交表单', U('mycreateparty'), 0);
+				exit;
+			}
+			$se = M('wxuser');
+			$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+			if ($wxse == null || $wxse == false) {
+				$this->success("请选择绑定一个账户", U('login'), 0);
+			}
+			$userid = $wxse['userid'];
+			$app = M('application');
+			$appid = $_GET['appid'];
+			$res = $app->where('id=' . $appid . ' AND state = 1')->find();
+			if ($res == null || $res == false) {
+				$this->success('该活动不存在了', U('mycreateparty'), 0);
+				exit;
+			}
+			if ($res['userid'] != $userid) {
+				$this->success('休想删除别人的活动', U('mycreateparty'), 0);
+				exit;
+			}
+			$data['state'] = 0;
+			$result = $app->where('id=' . $appid)->save($data);
+			if ($result == 0) {
+				$this->success('删除失败', U('mycreateparty'), 0);
+				exit;
+			}
+			$this->success('删除成功', U('mycreateparty'), 0);
+			session("ihadpost", '1');
+			exit;
+		} else {
+			echo "error :no session";
+			exit;
+		}
+	}
+
 	//组队创建
 	public function partycreate() {
 		$this->display();
