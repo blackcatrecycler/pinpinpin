@@ -172,7 +172,26 @@ class IndexController extends Controller {
 	}
 
 	public function myapp() {
+		if (!session('?wxusername')) {
+			$acc_code = $_GET["code"];
 
+			$acc_url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx09aaef70a0a8e448&secret=b5a7e32676db8bc0bdcd18f3402fa487&code=" . $acc_code . "&grant_type=authorization_code";
+			//echo $acc_url;
+			$main = new MyChat();
+			$result = $main->wxRequest($acc_url);
+			$resultinfo = json_decode($result, true);
+			$get_openid = $resultinfo['openid'];
+			//var_dump($resultinfo);
+			session('wxusername', $get_openid);
+		} else {
+			$get_openid = session('wxusername'); //得到了openid
+			//echo "openid:" . $get_openid;
+		}
+		$se = M('wxuser');
+		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+		if ($wxse == null || $wxse == false) {
+			$this->display();
+		}
 	}
 
 	//组队申请
@@ -203,8 +222,11 @@ class IndexController extends Controller {
 			$newapp['state'] = 1;
 			$newapp['createtime'] = time();
 			$a_db->add($newapp);
+			$p_db = M('party');
+			$a_db = M('application');
 			//检查是否完成组队
 			$applist = $a_db->where('partyid=' . $nowparty['id'] . ' AND state!=0')->select();
+
 			$nowpartycout = $nowparty['need'] + 0;
 			if ($nowpartycout == count($applist)) {
 				//达成目标
