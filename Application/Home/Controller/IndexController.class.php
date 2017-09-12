@@ -241,7 +241,7 @@ class IndexController extends Controller {
 			$app = M('party');
 			$a_db = M('application');
 			$appid = $_GET['appid'];
-			$res = $a_db->where('partyid=' . $appid . 'AND userid="' . $userid . '" AND state = 1')->find();
+			$res = $a_db->where('partyid=' . $appid . ' AND userid="' . $userid . '" AND state = 1')->find();
 			if ($res == null || $res == false) {
 				$this->success('该申请不存在了', U('myapp'), 0);
 				exit;
