@@ -632,7 +632,7 @@ e&state=loveld#wechat_redirect "
 		}
 		file_put_contents('log', "2");
 		//$fin = $p_se->order('createtime desc')->select(6);
-		$fin = array_slice($fin, 0, 6);
+		$fin = array_slice($p_se, 0, 6);
 		$all = cout($fin);
 		file_put_contents('log', "3");
 		$top = '<xml>
