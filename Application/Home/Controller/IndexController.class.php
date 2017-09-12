@@ -49,12 +49,10 @@ class IndexController extends Controller {
 		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
 		if ($wxse == null || $wxse == false) {
 			$this->display();
-		} else {m
+		} else {
 			$this->success('已绑定用户', U('userdisplay'), 0);
 		}
 	}
-
-
 
 	//未绑定用户需要绑定
 	public function userbind() {
@@ -173,7 +171,7 @@ class IndexController extends Controller {
 		}
 	}
 
-	public function myapp(){
+	public function myapp() {
 
 	}
 
@@ -213,10 +211,10 @@ class IndexController extends Controller {
 				foreach ($applist as $key => $value) {
 					# code...
 					$applist[$key]['state'] = 2;
-					$a_db->where('id='.$value['id'])->save($app_list[$key]);
+					$a_db->where('id=' . $value['id'])->save($app_list[$key]);
 				}
 				$nowparty['state'] = 2;
-				$a_db->where('id='.$nowparty['id'])->save($nowparty);
+				$a_db->where('id=' . $nowparty['id'])->save($nowparty);
 			}
 			$this->success("申请成功", U('queryparty'), 0);
 			exit;
