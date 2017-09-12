@@ -632,8 +632,14 @@ e&state=loveld#wechat_redirect "
 		}
 		file_put_contents('log', "2");
 		//$fin = $p_se->order('createtime desc')->select(6);
-		$fin = array_slice($p_se, 0, 6);
-		$all = cout($fin);
+		foreach ($p_se as $key => $value) {
+			# code...
+			if ($key == 6) {
+				break;
+			}
+			$fin[$key] = $p_se[$key];
+		}
+		$all = count($fin);
 		file_put_contents('log', "3");
 		$top = '<xml>
 <ToUserName><![CDATA[%s]]></ToUserName>
