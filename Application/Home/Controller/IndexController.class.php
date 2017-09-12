@@ -251,7 +251,7 @@ class IndexController extends Controller {
 				exit;
 			}
 			$data['state'] = 0;
-			$result = $a_db->where('partyid=' . $appid . 'AND userid="' . $userid . '" AND state = 1')->save($data);
+			$result = $a_db->where('partyid=' . $appid . ' AND userid="' . $userid . '" AND state = 1')->save($data);
 
 			if ($result == 0) {
 				$this->success('删除失败', U('myapp'), 0);
