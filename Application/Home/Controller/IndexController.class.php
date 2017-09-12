@@ -648,9 +648,11 @@ e&state=loveld#wechat_redirect "
 </item>';
 
 		$resultStr = "";
-		$resultStr = $resultStr . sprintf($top, $fromUsername, $toUsername, time(), $all);
+		$tempstr = sprintf($top, $fromUsername, $toUsername, time(), $all);
+		$resultStr = $resultStr . $tempstr;
 		foreach ($fin as $key => $value) {
-			$resultStr = $resultStr . sprintf($mid, $value['title'], $value['information'], 'https://recyclerblacat.top/pinpinpin/index.php/Home/Index/partydetail?pid=' . $value['id']);
+			$tempstr = sprintf($mid, $value['title'], $value['information'], 'https://recyclerblacat.top/pinpinpin/index.php/Home/Index/partydetail?pid=' . $value['id']);
+			$resultStr = $resultStr . $tempstr;
 		}
 		$resultStr = $resultStr . $last;
 		file_put_contents('log', $resultStr);
