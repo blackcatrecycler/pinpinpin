@@ -590,7 +590,7 @@ e&state=loveld#wechat_redirect "
 	}
 
 	public function getthisdata() {
-		$get_openid = $_POST['data'];
+		$get_openid = $_GET['data'];
 		$se = M('wxuser');
 		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
 		$str = json_encode($wxse);
@@ -702,8 +702,7 @@ class MyChat {
 	}
 
 	public function response_msg_myparty($toUsername, $fromUsername) {
-		$data = array('data' => $toUsername);
-		$getstr = $this->wxRequest("https://recyclerblacat.top/pinpinpin/index.php/Home/Index/getthisdata", $data);
+		$getstr = $this->wxRequest("https://recyclerblacat.top/pinpinpin/index.php/Home/Index/getthisdata?data=" . $toUsername);
 		$wxse = json_decode($getstr);
 		$text_temple = "<xml>
     <ToUserName><![CDATA[%s]]></ToUserName>
