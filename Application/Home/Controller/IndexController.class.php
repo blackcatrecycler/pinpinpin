@@ -199,7 +199,8 @@ class IndexController extends Controller {
 			$a_db->add($newapp);
 			//检查是否完成组队
 			$applist = $a_db->where('partyid=' . $nowparty['id'] . ' AND state!=0')->select();
-			if ($nowparty['need'] == count($applist)) {
+			$nowpartycout = $nowparty['need'] + 0;
+			if ($nowpartycout == count($applist)) {
 				//达成目标
 				foreach ($applist as $key => $value) {
 					# code...
