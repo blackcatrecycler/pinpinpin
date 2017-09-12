@@ -589,6 +589,12 @@ e&state=loveld#wechat_redirect "
 		//echo $menu_data;
 	}
 
+	public function getthisdata($get_openid) {
+		$se = M('wxuser');
+		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+		return $wxse;
+	}
+
 }
 
 class MyChat {
@@ -694,8 +700,8 @@ class MyChat {
 	}
 
 	public function response_msg_myparty($toUsername, $fromUsername) {
-		$se = M('wxuser');
-		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+		$x = new IndexController();
+		$wxse = $x->getthisdata($toUsername);
 		$text_temple = "<xml>
     <ToUserName><![CDATA[%s]]></ToUserName>
     <FromUserName><![CDATA[%s]]></FromUserName>
