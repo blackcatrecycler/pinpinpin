@@ -714,6 +714,7 @@ class MyChat {
 </xml>";
 		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, time(), $wxse['id']);
 		file_put_contents('log', $resultStr);
+		return $resultStr;
 	}
 
 	//消息回复
