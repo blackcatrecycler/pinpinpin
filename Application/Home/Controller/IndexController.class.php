@@ -620,6 +620,7 @@ e&state=loveld#wechat_redirect "
 			$resultStr = $this->response_msg($toUsername, $fromUsername, $str);
 			return $resultStr;
 		}
+		file_put_contents('log', "1");
 		$p_db = M('party');
 		$a_db = M('application');
 		$p_se = $p_db->where('userid="' . $wxse['userid'] . '" AND state =2')->select();
@@ -629,9 +630,10 @@ e&state=loveld#wechat_redirect "
 			$temp = $p_db->where('id=' . $value['partyid'])->find();
 			$p_se[$s] = $temp;
 		}
-
+		file_put_contents('log', "2");
 		$fin = $p_se->order('createtime desc')->select(6);
 		$all = cout($fin);
+		file_put_contents('log', "3");
 		$top = '<xml>
 <ToUserName><![CDATA[%s]]></ToUserName>
 <FromUserName><![CDATA[%s]]></FromUserName>
@@ -654,6 +656,7 @@ e&state=loveld#wechat_redirect "
 			$tempstr = sprintf($mid, $value['title'], $value['information'], 'https://recyclerblacat.top/pinpinpin/index.php/Home/Index/partydetail?pid=' . $value['id']);
 			$resultStr = $resultStr . $tempstr;
 		}
+		file_put_contents('log', "4");
 		$resultStr = $resultStr . $last;
 		file_put_contents('log', $resultStr);
 		return $resultStr;
