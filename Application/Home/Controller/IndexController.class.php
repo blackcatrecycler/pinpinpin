@@ -640,6 +640,11 @@ e&state=loveld#wechat_redirect "
 			$fin[$key] = $p_se[$key];
 		}
 		$all = count($fin);
+		if ($all == 0) {
+			$str = '近期没有活动';
+			$resultStr = $this->response_msg($toUsername, $fromUsername, $str);
+			return $resultStr;
+		}
 		file_put_contents('log', "3");
 		$top = '<xml>
 <ToUserName><![CDATA[%s]]></ToUserName>
