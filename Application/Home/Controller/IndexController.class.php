@@ -666,7 +666,7 @@ e&state=loveld#wechat_redirect "
 		$resultStr = $resultStr . $tempstr;
 		foreach ($fin as $key => $value) {
 			//$purl = 'https://recyclerblacat.top/pinpinpin/Public/images/demo.jpg';
-			$purl = 'https://s1.imgchr.com/2017/09/12/neV5F.jpg';
+			$purl = 'https://timgsa.baidu.com/timg?image&quality=80%20&size=b10000_10000&sec=1505208986394&di=03eab46d6b2cd51d0cf9d6b064238605&imgtype=jpg&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fa8ec8a13632762d0259cde99abec08fa513dc672.jpg';
 			$tempstr = sprintf($mid, $value['title'], $value['information'], $purl, 'https://recyclerblacat.top/pinpinpin/index.php/Home/Index/partydetail?pid=' . $value['id']);
 			$resultStr = $resultStr . $tempstr;
 		}
