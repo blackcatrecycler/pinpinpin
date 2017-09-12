@@ -252,6 +252,9 @@ class IndexController extends Controller {
 			}
 			$this->success('删除成功', U('mycreateparty'), 0);
 			session("ihadpost", '1');
+			$gs = new MyChat();
+			$gs->response_msg($userid, "gh_a5bf17458452
+", "您已取消活动");
 			exit;
 		} else {
 			echo "error :no session";
