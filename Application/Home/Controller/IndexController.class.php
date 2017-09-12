@@ -682,6 +682,8 @@ class MyChat {
 			$content = trim($rec_object->Content);
 			if (strstr($content, "刘丹")) {
 				$result = $this->response_msg($toUsername, $fromUsername, "我爱你");
+			} else if (strstr($content, "我的队伍") || strstr($content, "当前队伍")) {
+				$result = $this->response_msg_myparty($toUsername, $fromUsername);
 			} else {
 				$result = $this->response_msg($toUsername, $fromUsername, $content);
 			}echo $result;
@@ -690,6 +692,21 @@ class MyChat {
 			exit;
 		}
 	}
+
+	public function response_msg_myparty($toUsername, $fromUsername) {
+		$se = M('wxuser');
+		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+		$text_temple = "<xml>
+    <ToUserName><![CDATA[%s]]></ToUserName>
+    <FromUserName><![CDATA[%s]]></FromUserName>
+    <CreateTime>%s</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[%s]]></Content>
+</xml>";
+		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, time(), $wxse['id']);
+		file_put_contents('log', $resultStr);
+	}
+
 	//消息回复
 	public function response_msg($toUsername, $fromUsername, $content) {
 		$text_temple = "<xml>
