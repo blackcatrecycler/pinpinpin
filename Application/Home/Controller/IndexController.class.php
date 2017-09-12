@@ -190,6 +190,7 @@ class IndexController extends Controller {
 		$se = M('wxuser');
 		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
 		if ($wxse == null || $wxse == false) {
+
 			$this->display();
 		}
 	}
@@ -227,16 +228,16 @@ class IndexController extends Controller {
 			//检查是否完成组队
 			$applist = $a_db->where('partyid=' . $nowparty['id'] . ' AND state!=0')->select();
 
-			$nowpartycout = $nowparty['need'] + 0;
+			$nowpartycout = intval($nowparty['need']);
 			if ($nowpartycout == count($applist)) {
 				//达成目标
 				foreach ($applist as $key => $value) {
 					# code...
-					$applist[$key]['state'] = 2;
-					$a_db->where('id=' . $value['id'])->save($app_list[$key]);
+					$data['state'] = 2;
+					$a_db->where('id=' . $value['id'])->save($data);
 				}
-				$nowparty['state'] = 2;
-				$a_db->where('id=' . $nowparty['id'])->save($nowparty);
+				$data['state'] = 2;
+				$p_db->where('id=' . $nowparty['id'])->save($data);
 			}
 			$this->success("申请成功", U('queryparty'), 0);
 			exit;
