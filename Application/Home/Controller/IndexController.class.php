@@ -593,7 +593,7 @@ e&state=loveld#wechat_redirect "
 		$get_openid = $_POST['data'];
 		$se = M('wxuser');
 		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
-		$str = json_enecode($wxse);
+		$str = json_encode($wxse);
 		echo $str;
 	}
 
