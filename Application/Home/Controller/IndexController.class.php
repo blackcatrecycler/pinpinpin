@@ -612,14 +612,47 @@ e&state=loveld#wechat_redirect "
 	}
 
 	public function response_msg_myparty($toUsername, $fromUsername) {
-		$text_temple = "<xml>
-    <ToUserName><![CDATA[%s]]></ToUserName>
-    <FromUserName><![CDATA[%s]]></FromUserName>
-    <CreateTime>%s</CreateTime>
-    <MsgType><![CDATA[text]]></MsgType>
-    <Content><![CDATA[%s]]></Content>
-</xml>";
-		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, time(), $getstr);
+
+		$se = M('wxuser');
+		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
+		if ($wxse == null || $wxse == false) {
+			$str = '<a href="https://recyclerblacat.top/pinpinpin/index.php/Home/Index/login">请先绑定账户</a>';
+			$resultStr = response_msg($toUsername, $fromUsername, $str);
+			return $resultStr;
+		}
+		$p_db = M('party');
+		$a_db = M('application');
+		$p_se = $p_db->where('userid="' . $wxse['userid'] . '" AND state =2')->select();
+		$a_se = $a_db->where('userid="' . $wxse['userid'] . '" AND state =2')->select();
+		foreach ($a_se as $key => $value) {
+			$s = count($p_se) + $key;
+			$temp = $p_db->where('id=' . $value['partyid'])->find();
+			$p_se[$s] = $temp;
+		}
+
+		$fin = $p_se->order('createtime desc')->select(6);
+		$all = cout($fin);
+		$top = '<xml>
+<ToUserName><![CDATA[%s]]></ToUserName>
+<FromUserName><![CDATA[%s]]></FromUserName>
+<CreateTime>%s</CreateTime>
+<MsgType><![CDATA[news]]></MsgType>
+<ArticleCount>%s</ArticleCount><Articles>';
+		$last = '</Articles>
+</xml>';
+		$mid = '<item>
+<Title><![CDATA[%s]]></Title>
+<Description><![CDATA[%s]]></Description>
+<PicUrl><![CDATA[https://recyclerblacat.top/pinpinpin/Public/image/demo.jpg]]></PicUrl>
+<Url><![CDATA[%s]]></Url>
+</item>';
+
+		$resultStr = "";
+		$resultStr = $resultStr . sprintf($top, $fromUsername, $toUsername, time(), $all);
+		foreach ($fin as $key => $value) {
+			$resultStr = $resultStr . sprintf($mid, $value['title'], $value['information'], 'https://recyclerblacat.top/pinpinpin/index.php/Home/Index/partydetail?pid=' . $value['id']);
+		}
+		$resultStr = $resultStr . $last;
 		file_put_contents('log', $resultStr);
 		return $resultStr;
 	}
@@ -720,56 +753,6 @@ class MyChat {
 		return $arr;
 	}
 
-	//消息获取
-	public function recive_msg() {
-		$rec_data = $GLOBALS["HTTP_RAW_POST_DATA"];
-		if (!empty($rec_data)) {
-			$rec_object = simplexml_load_string($rec_data, 'SimpleXMLElement', LIBXML_NOCDATA);
-			$fromUsername = $rec_object->FromUserName;
-			$toUsername = $rec_object->ToUserName;
-			$time = $rec_object->CreateTime;
-			$content = trim($rec_object->Content);
-			if (strstr($content, "刘丹")) {
-				$result = $this->response_msg($toUsername, $fromUsername, "我爱你");
-			} else if (strstr($content, "我的队伍") || strstr($content, "当前队伍")) {
-				$result = $this->response_msg_myparty($toUsername, $fromUsername);
-			} else {
-				$result = $this->response_msg($toUsername, $fromUsername, $content);
-			}echo $result;
-		} else {
-			echo "";
-			exit;
-		}
-	}
-
-	public function response_msg_myparty($toUsername, $fromUsername) {
-		$getstr = $this->wxRequest("https://recyclerblacat.top/pinpinpin/index.php/Home/Index/getthisdata?data=" . $toUsername);
-		$wxse = json_decode($getstr);
-		$text_temple = "<xml>
-    <ToUserName><![CDATA[%s]]></ToUserName>
-    <FromUserName><![CDATA[%s]]></FromUserName>
-    <CreateTime>%s</CreateTime>
-    <MsgType><![CDATA[text]]></MsgType>
-    <Content><![CDATA[%s]]></Content>
-</xml>";
-		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, time(), $getstr);
-		file_put_contents('log', $resultStr);
-		return $resultStr;
-	}
-
-	//消息回复
-	public function response_msg($toUsername, $fromUsername, $content) {
-		$text_temple = "<xml>
-    <ToUserName><![CDATA[%s]]></ToUserName>
-    <FromUserName><![CDATA[%s]]></FromUserName>
-    <CreateTime>%s</CreateTime>
-    <MsgType><![CDATA[text]]></MsgType>
-    <Content><![CDATA[%s]]></Content>
-</xml>";
-		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, time(), $content);
-		file_put_contents('log', $resultStr);
-		return $resultStr;
-	}
 }
 
 class DB_Helper {
