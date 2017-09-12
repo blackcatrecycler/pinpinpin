@@ -224,13 +224,14 @@ class IndexController extends Controller {
 				$this->success('请勿重复提交表单', U('mycreateparty'), 0);
 				exit;
 			}
+			$get_openid = session('wxusername'); //得到了openid
 			$se = M('wxuser');
 			$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
 			if ($wxse == null || $wxse == false) {
 				$this->success("请选择绑定一个账户", U('login'), 0);
 				exit;
 			}
-			$get_openid = session('wxusername'); //得到了openid
+
 			$userid = $wxse['userid'];
 			$app = M('application');
 			$appid = $_GET['appid'];
