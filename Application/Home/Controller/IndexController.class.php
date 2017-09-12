@@ -14,7 +14,7 @@ class IndexController extends Controller {
 	public function index() {
 		$main = new MyChat();
 		if (!isset($_GET['echostr'])) {
-			$main->recive_msg();
+			$this->recive_msg();
 		} else {
 			$main->valid();
 		}
@@ -589,12 +589,53 @@ e&state=loveld#wechat_redirect "
 		//echo $menu_data;
 	}
 
-	public function getthisdata() {
-		$get_openid = $_GET['data'];
-		$se = M('wxuser');
-		$wxse = $se->where('wx="' . $get_openid . '" AND state = 1')->find();
-		$str = json_encode($wxse);
-		echo $str;
+	//消息获取
+	public function recive_msg() {
+		$rec_data = $GLOBALS["HTTP_RAW_POST_DATA"];
+		if (!empty($rec_data)) {
+			$rec_object = simplexml_load_string($rec_data, 'SimpleXMLElement', LIBXML_NOCDATA);
+			$fromUsername = $rec_object->FromUserName;
+			$toUsername = $rec_object->ToUserName;
+			$time = $rec_object->CreateTime;
+			$content = trim($rec_object->Content);
+			if (strstr($content, "刘丹")) {
+				$result = $this->response_msg($toUsername, $fromUsername, "我爱你");
+			} else if (strstr($content, "我的队伍") || strstr($content, "当前队伍")) {
+				$result = $this->response_msg_myparty($toUsername, $fromUsername);
+			} else {
+				$result = $this->response_msg($toUsername, $fromUsername, $content);
+			}echo $result;
+		} else {
+			echo "";
+			exit;
+		}
+	}
+
+	public function response_msg_myparty($toUsername, $fromUsername) {
+		$text_temple = "<xml>
+    <ToUserName><![CDATA[%s]]></ToUserName>
+    <FromUserName><![CDATA[%s]]></FromUserName>
+    <CreateTime>%s</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[%s]]></Content>
+</xml>";
+		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, time(), $getstr);
+		file_put_contents('log', $resultStr);
+		return $resultStr;
+	}
+
+	//消息回复
+	public function response_msg($toUsername, $fromUsername, $content) {
+		$text_temple = "<xml>
+    <ToUserName><![CDATA[%s]]></ToUserName>
+    <FromUserName><![CDATA[%s]]></FromUserName>
+    <CreateTime>%s</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[%s]]></Content>
+</xml>";
+		$resultStr = sprintf($text_temple, $fromUsername, $toUsername, time(), $content);
+		file_put_contents('log', $resultStr);
+		return $resultStr;
 	}
 
 }
